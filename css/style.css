@@ -5,6 +5,20 @@
 
 }
 
-body {
+
+/* Conteúdo */
+main {
+    background-color: white;
+}
+
+/* Cabeçalho */
+header {
     background-color: black;
+}
+
+/* Rodapé */
+footer {
+    background-color: #001A47;
+    display: flex;
+    flex-direction: row;
 }
