@@ -5,10 +5,10 @@
 
 }
 
-
-
 /* Cabeçalho */
 .cabecalho {
+    max-width: 100vw;
+    height: 100px;
     padding: 15px;
     background-color: black;
     display: flex;
@@ -25,27 +25,28 @@
 }
 
 .cabecalho .logo {
-    width: 100px;
+    width: 5%;
     margin-right: 0px;
 }
 
 .cabecalho img {
-    width: 40px;
+    width: 2%;
 }
 
 .cabecalho .procurar {
     border-radius: 20px;
-    height: 40px;
-    width: 250px;
+    height: 5%;
+    width: 13%;
     border: 4px white solid;
     background-color: black;
     color: white;
+    align-self: center;
     padding: 10px;
 }
 
 .paginas .link {
     font-family: "Jura", sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-decoration: none;
     color: white;
 }
@@ -54,38 +55,62 @@
 main {
     background-color: #D9F1FF;
     padding: 0;
-    display: flex; 
+    display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
     gap: 50px;
     height: auto;
-    width: 100vw;
+    min-width: 20vw;
+    max-width: 100vw;
 }
 
 .conteudo {
     display: grid;
-    background-color: #FFFFFF;
     grid-template-columns: 50% 50%;
-    column-gap: 10px;
+    background-color: rgba(255, 255, 255, 0.80);
     margin: 100px;
-    padding: 20px;
-    height: 50vh;
+    padding: 40px;
+    height: 60vh;
     width: 75vw;
-    box-shadow: 10px 10px;
+    box-shadow: 5px 5px 15px 0px black;
     border-radius: 10px;
-
-
 }
 
-.img{
-    border-radius: 100px;
+.conteudo .imagem{
+    padding: 20px;
+    justify-content: center;
+    align-self: center;
+}
+
+.imagem img{
+    border-radius: 15px;
+    max-width: 100%;
+}
+
+.texto{
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 1;
+    grid-row: span 1;
+    max-width: 100%;
 }
 .conteudo .conteudo__titulo {
+    color: #001A47;
     font-family: "Archivo", sans-serif;
     font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 46px;
 }
 
+.conteudo__texto{
+    margin-top: 15px;
+    color: #001A47;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+}
 
 /* Rodapé */
 footer {
@@ -97,7 +122,6 @@ footer {
     gap: 50px;
     height: auto;
     width: 100%;
-    position: fixed;
     bottom: 0px;
 }
 
@@ -115,17 +139,18 @@ footer {
 
 }
 .rodape .rodape__play {
-    width: 10%;
+    width: 13%;
     height: auto;
     margin-left: 100px;
+    padding-left: 50px;
     border-left: 2px white solid;
     margin-right: 0px;
 }
 
 .rodape .rodape__app {
-    width: 11%;
+    width: 13%;
     height: auto;
-    padding-left: 35px;
+    padding-left: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-right: 60px;
@@ -133,13 +158,12 @@ footer {
 }
 
 
-
 .redes__sociais{
     display: flex;
     flex-direction: column;
     align-items: center;
     border-left: 2px white solid;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .redes__icones {
