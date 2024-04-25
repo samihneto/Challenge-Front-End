@@ -12,8 +12,46 @@ main {
 }
 
 /* Cabeçalho */
-header {
+.cabecalho {
+    padding: 40px;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.navegacao .paginas {
+    margin-left: 100px;
+    display: flex;
+    gap: 60px;
+
+}
+
+.cabecalho .logo {
+    width: 100px;
+    margin-right: 0px;
+}
+
+.cabecalho img {
+    width: 40px;
+}
+
+.cabecalho .procurar {
+    border-radius: 20px;
+    height: 40px;
+    width: 250px;
+    border: 4px white solid;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.paginas .link {
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
 }
 
 /* Rodapé */
@@ -23,32 +61,52 @@ footer {
     display: flex; 
     justify-content: center;
     align-items: center;
-    
+    gap: 50px;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
 }
-
-
-.rodape{
-    height: auto
-}
-
 
 .redes__sociais .redes__titulo {
     display: flex;   
     align-self: center;
     margin-bottom: 10px;
-    font-family: "Jura", sans-serif;;
+    font-family: "Jura", sans-serif;
+    color: white;
 }
 
-.rodape .rodape__imagens {
-    margin: 0 10px;
+.rodape .rodape__logo {
+    width: 170px;
+    height: auto;
+
+}
+.rodape .rodape__play {
     width: 10%;
     height: auto;
+    margin-left: 100px;
+    border-left: 2px white solid;
+    margin-right: 0px;
 }
+
+.rodape .rodape__app {
+    width: 11%;
+    height: auto;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 60px;
+    border-left: 2px white solid;
+}
+
+
 
 .redes__sociais{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-left: 2px white solid;
+    padding-left: 40px;
 }
 
 .redes__icones {
@@ -69,9 +127,11 @@ footer {
 
 .contatos {
     margin-left: 20px;
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border-left: 2px white solid;
 }
 
 .contatos__telefone {
@@ -91,14 +151,17 @@ footer {
 
 .texto__telefone {
     font-family: "Jura", sans-serif;
+    color: white;
 }
 
 .texto__site {
     font-family: "Jura", sans-serif;
+    color: white;
 }
 
 .texto__email {
     font-family: "Jura", sans-serif;
+    color: white;
 }
 
 .contatos img {
