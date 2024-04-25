@@ -5,57 +5,14 @@
 
 }
 
-/* Cabeçalho */
-.cabecalho {
-    max-width: 100vw;
-    height: 100px;
-    padding: 15px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-}
 
-.navegacao .paginas {
-    margin-left: 100px;
-    display: flex;
-    gap: 60px;
-
-}
-
-.cabecalho .logo {
-    width: 5%;
-    margin-right: 0px;
-}
-
-.cabecalho img {
-    width: 2%;
-}
-
-.cabecalho .procurar {
-    border-radius: 20px;
-    height: 5%;
-    width: 13%;
-    border: 4px white solid;
-    background-color: black;
-    color: white;
-    align-self: center;
-    padding: 10px;
-}
-
-.paginas .link {
-    font-family: "Jura", sans-serif;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: white;
-}
 
 /* Conteúdo */
 main {
     background-color: #D9F1FF;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -72,7 +29,7 @@ main {
     margin: 100px;
     padding: 40px;
     height: 60vh;
-    width: 75vw;
+    max-width: 75vw;
     box-shadow: 5px 5px 15px 0px black;
     border-radius: 10px;
 }
@@ -112,115 +69,3 @@ main {
     font-size: 100%;
 }
 
-/* Rodapé */
-footer {
-    background-color: #001A47;
-    padding: 0;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    height: auto;
-    width: 100%;
-    bottom: 0px;
-}
-
-.redes__sociais .redes__titulo {
-    display: flex;   
-    align-self: center;
-    margin-bottom: 10px;
-    font-family: "Jura", sans-serif;
-    color: white;
-}
-
-.rodape .rodape__logo {
-    width: 170px;
-    height: auto;
-
-}
-.rodape .rodape__play {
-    width: 13%;
-    height: auto;
-    margin-left: 100px;
-    padding-left: 50px;
-    border-left: 2px white solid;
-    margin-right: 0px;
-}
-
-.rodape .rodape__app {
-    width: 13%;
-    height: auto;
-    padding-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 60px;
-    border-left: 2px white solid;
-}
-
-
-.redes__sociais{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-left: 2px white solid;
-    padding-left: 70px;
-}
-
-.redes__icones {
-    display: flex;
-    flex-direction: row;
-}
-
-.redes__icones ul {
-    list-style-type: none;
-}
-
-.redes__sociais img{
-    margin: 5px;
-    padding: 0px;
-    width: 30px;
-    height: 30px;
-}
-
-.contatos {
-    margin-left: 20px;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-left: 2px white solid;
-}
-
-.contatos__telefone {
-    display: flex;
-    gap: 20px;
-}
-
-.contatos__site {
-    display: flex;
-    gap: 20px;
-}
-
-.contatos__email {
-    display: flex;
-    gap: 20px;
-}
-
-.texto__telefone {
-    font-family: "Jura", sans-serif;
-    color: white;
-}
-
-.texto__site {
-    font-family: "Jura", sans-serif;
-    color: white;
-}
-
-.texto__email {
-    font-family: "Jura", sans-serif;
-    color: white;
-}
-
-.contatos img {
-    width: 30px;
-}

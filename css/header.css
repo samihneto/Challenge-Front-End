@@ -1,0 +1,45 @@
+/* Cabeçalho */
+.cabecalho {
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 15px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.navegacao .paginas {
+    margin-left: 100px;
+    display: flex;
+    gap: 60px;
+
+}
+
+.cabecalho .logo {
+    width: 5%;
+    margin-right: 0px;
+}
+
+.cabecalho img {
+    width: 2%;
+}
+
+.cabecalho .procurar {
+    border-radius: 20px;
+    height: 5%;
+    width: 13%;
+    border: 4px white solid;
+    background-color: black;
+    color: white;
+    align-self: center;
+    padding: 10px;
+}
+
+.paginas .link {
+    font-family: "Jura", sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
