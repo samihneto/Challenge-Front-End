@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 
@@ -12,6 +11,7 @@ main {
     background-color: #D9F1FF;
     padding: 0;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
@@ -23,36 +23,40 @@ main {
 }
 
 .conteudo {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.80);
     margin: 100px;
     padding: 40px;
-    height: 60vh;
-    max-width: 75vw;
+    height: 60%;
+    width: 75%;
+    max-width: 100%;
     box-shadow: 5px 5px 15px 0px black;
     border-radius: 10px;
 }
 
 .conteudo .imagem{
-    padding: 20px;
-    justify-content: center;
-    align-self: center;
+    width: 50%;
 }
 
 .imagem img{
     border-radius: 15px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .texto{
     padding: 50px;
     justify-content: center;
     align-items: center;
-    grid-column: span 1;
-    grid-row: span 1;
-    max-width: 100%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: column;
 }
+
 .conteudo .conteudo__titulo {
     color: #001A47;
     font-family: "Archivo", sans-serif;
@@ -67,5 +71,7 @@ main {
     font-family: "Archivo", sans-serif;
     font-weight: 500;
     font-size: 100%;
+    max-height: 100%;
+    position: relative;
 }
 

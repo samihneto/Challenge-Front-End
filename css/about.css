@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #D9F1FF;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    min-width: 20vw;
+    max-width: 100vw;
+    margin: 0;
+}
+
+
+
+.about__titulo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    align-self: center;
+    margin-top: 20px;
+    color: #001A47;
+}
+
+.about .caixa__um {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    height: auto;
+    width: 80%;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px black;
+}
+
+.about__nome {
+    font-family: "Teko", sans-serif;
+    font-size: 40px;
+    width: 150%;
+    margin-right: 20px;
+    color: #001A47;
+}
+
+.about__rm {
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    width: 30%;
+    color: #001A47;
+}
+
+.caixa__icones {
+    width: 100%;
+    color: #001A47;
+}
+
+.about__img {
+    width: 10%;
+    border-radius: 100px;
+}
+
+.about .caixa__dois {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    height: auto;
+    width: 80%;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px black; 
+}
+
+.about .caixa__tres {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    height: auto;
+    width: 80%;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px black;
+}
+
+.icones {
+    width: 10%;
+}
