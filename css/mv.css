@@ -18,14 +18,100 @@ main {
     min-width: 20vw;
     max-width: 100vw;
     margin: 0;
+}
 
-    .titulo_mv{
-        font-family: "Archivo", sans-serif;
-        font-weight: 800;
-        font-size: 50px;
-        align-self: center;
-        margin-top: 20px;
-    }
+.parte_superior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
+.mv__titulo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: 50px;
+    color: #001A47;
+}
 
+.mv__ferramenta {
+    width: 6%;
+    height: auto;
+    align-self: center;
+    position: relative;
+    top: 25px;
 
+}
+
+.bot_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.80);
+    margin: 30px 100px 100px 100px;
+    padding: 80px 60px 15px 60px;
+    height: 100%;
+    width: 65%;
+    max-width: 100%;
+    box-shadow: 5px 5px 15px 0px black;
+    border-radius: 10px;
+    gap: 40px;
+}
+
+.bot__chat {
+    display: flex; 
+    gap: 5px;
+  
+} 
+
+.bot__input {
+    border: none;
+    background-color: #001A47;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    width: 90%;
+}
+
+::placeholder {
+    color: white;
+    justify-content: center;
+    font-family: "Archivo", sans-serif;
+}
+
+.bot__btn {
+    width: 3%;
+
+}
+
+.bot__btn img {
+    padding: 10px;
+    width: 100%;
+    background-color: #66C5FC;
+    border-radius: 30px;
+}
+
+.txt__bot {
+    background-color: #001A47;
+    padding: 25px;
+    border-radius: 10px;
+    width: 40%;
+    position: relative;
+    right: 280px;
+    color: white;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+}
+
+.txt__user {
+    background-color: #66C5FC;
+    padding: 25px;
+    border-radius: 10px;
+    width: 40%;
+    position: relative;
+    left: 250px;
+    color: #001A47;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+}

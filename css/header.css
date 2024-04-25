@@ -42,4 +42,10 @@
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
+    transition: 0.2s ease-in;
+
 }
+    .link:hover{
+        color: #B1E2FD;
+
+    }
