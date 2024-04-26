@@ -41,10 +41,36 @@ main {
 }
 
 .conteudo__agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: rgba(255, 255, 255, 0.80);
     padding: 40px;
     width: 30%;
     border-radius: 20px;
+}
+
+.txt__agenda {
+    background-color: #001A47;
+    padding: 25px;
+    border-radius: 20px;
+    width: 100%;
+    position: initial;
+    left: 90px;
+    color: white;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+}
+
+.date {
+    border: none;
+    background-color: #66C5FC;
+    align-self: center;
+    color: #001A47;
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    width: 40%;
 }
 
 .board__texto {
