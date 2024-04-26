@@ -95,6 +95,19 @@ main {
     box-shadow: 5px 5px 15px black;
 }
 
+.about .caixa__quatro {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    height: auto;
+    width: 80%;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px black;
+}
+
 .icones {
-    width: 10%;
+    width: 15%;
 }
