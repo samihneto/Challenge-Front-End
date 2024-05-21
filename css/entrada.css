@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #D9F1FF;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+    min-width: 20vw;
+    max-width: 100vw;
+    margin: 0;
+}
+
+.caixa__entrada {
+    background-color: rgba(255, 255, 255, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 40%;
+    height: 40%;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
+    transition: transform 1s;
+    transform: translateX(0) scale(1.1);
+}
+
+.caixa__entrada .ou {
+    font-family: "Archivo", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+.btn__cadastro {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+    padding: 20px;
+    border: none;
+    background-color: #001A47;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn__login {
+    display: flex;
+    justify-content: center;
+    color: #001A47;
+    text-decoration: none;
+    width: 200px;
+    padding: 20px;
+    border: none;
+    background-color: #B1E2FD;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
+    font-family: "Jura", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn__cadastro:hover {
+    scale: 1.1;
+}
+
+.btn__login:hover {
+    scale: 1.1;
+}
