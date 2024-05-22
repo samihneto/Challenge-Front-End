@@ -27,8 +27,8 @@ main {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    width: 40%;
-    height: 40%;
+    width: 30vw;
+    height: 50vh;
     padding: 100px;
     border-radius: 20px;
     box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
@@ -38,7 +38,7 @@ main {
 
 .caixa__entrada .ou {
     font-family: "Archivo", sans-serif;
-    font-size: 25px;
+    font-size: 1vw;
     font-weight: 600;
 }
 
@@ -48,14 +48,14 @@ main {
     justify-content: center;
     color: white;
     text-decoration: none;
-    width: 200px;
+    width: 8vw;
     padding: 20px;
     border: none;
     background-color: #001A47;
     border-radius: 10px;
     box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
     font-family: "Jura", sans-serif;
-    font-size: 20px;
+    font-size: 0.8vw;
     font-weight: 700;
 }
 
@@ -64,14 +64,14 @@ main {
     justify-content: center;
     color: #001A47;
     text-decoration: none;
-    width: 200px;
+    width: 8vw;
     padding: 20px;
     border: none;
     background-color: #B1E2FD;
     border-radius: 10px;
     box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
     font-family: "Jura", sans-serif;
-    font-size: 20px;
+    font-size: 0.8vw;
     font-weight: 700;
 }
 
@@ -81,4 +81,49 @@ main {
 
 .btn__login:hover {
     scale: 1.1;
+}
+
+@media (max-width: 1024px) {
+    .caixa__entrada {
+        width: 50vw;
+        height: 50vh;
+    }
+    
+    .caixa__entrada .ou {
+        font-size: 2vw;
+    }
+    
+    
+    .btn__cadastro {
+        width: 14vw;
+        font-size: 1.2vw;
+    }
+    
+    .btn__login {
+        width: 14vw;
+        font-size: 1.2vw;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .caixa__entrada {
+        width: 70vw;
+        height: 50vh;
+    }
+    
+    .caixa__entrada .ou {
+        font-size: 3vw;
+    }
+    
+    
+    .btn__cadastro {
+        width: 25vw;
+        font-size: 1.8vw;
+    }
+    
+    .btn__login {
+        width: 25vw;
+        font-size: 2vw;
+    }
 }

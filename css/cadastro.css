@@ -26,7 +26,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 10%;
     width: 30%;
     height: 55%;
     padding: 150px;
@@ -37,30 +37,32 @@ main {
 }
 
 .caixa__cadastro {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    row-gap: 30%;
+    justify-items: center;
+    align-content: center;
 }
 
 
 .campos {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
 }
 
 .fileira_esquerda {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 10%;
 
 }
 
 .fileira_direita {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 10%;
 }
 
 /* Nome */
@@ -78,8 +80,8 @@ main {
 #input_nome {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
@@ -104,8 +106,8 @@ main {
 #input_email {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
@@ -130,8 +132,8 @@ main {
 #input_data {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
@@ -156,8 +158,8 @@ main {
 #input_tel {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
@@ -182,8 +184,8 @@ main {
 #input_rg {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
@@ -208,8 +210,8 @@ main {
 #input_cpf {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
@@ -234,8 +236,8 @@ main {
 #input_cep {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
@@ -255,13 +257,14 @@ main {
 .label_input_endereco {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 100%;
 }
 
 #input_endereco {
     border: none;
     padding: 10px;
-    width: 200px;
-    height: 30px;
+    width: 8vw;
+    height: 4vh;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
 }
