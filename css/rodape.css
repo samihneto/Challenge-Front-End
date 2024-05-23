@@ -2,44 +2,45 @@
 footer {
     background-color: #001A47;
     padding: 0;
-    display: flex; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     height: auto;
-    width: 100%;
+    width: 100vw;
     bottom: 0px;
 }
 
 .redes__sociais .redes__titulo {
     display: flex;   
     align-self: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.5vw;
     font-family: "Jura", sans-serif;
     color: white;
+    font-size: 1.5vw;
 }
 
 .rodape .rodape__logo {
-    width: 170px;
-    height: auto;
+    width: 7vw;
+    
 
 }
 .rodape .rodape__play {
-    width: 13%;
+    width: 12vw;
     height: auto;
-    margin-left: 100px;
-    padding-left: 50px;
+    margin-left: 5vw;
+    padding-left: 2.5vw;
     border-left: 2px white solid;
     margin-right: 0px;
 }
 
 .rodape .rodape__app {
-    width: 13%;
+    width: 12vw;
     height: auto;
-    padding-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 60px;
+    padding-left: 3vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    margin-right: 0;
     border-left: 2px white solid;
 }
 
@@ -49,7 +50,7 @@ footer {
     flex-direction: column;
     align-items: center;
     border-left: 2px white solid;
-    padding-left: 70px;
+    padding-left: 3.5vw;
 }
 
 .redes__icones {
@@ -62,51 +63,53 @@ footer {
 }
 
 .redes__sociais img{
-    margin: 5px;
-    padding: 0px;
-    width: 30px;
-    height: 30px;
+    margin: 0.2vw;
+    padding: 0;
+    width: 1vw;
 }
 
 .contatos {
-    margin-left: 20px;
-    padding-left: 50px;
+    margin-left: 1vw;
+    padding-left: 2vw;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1vw;
     border-left: 2px white solid;
 }
 
 .contatos__telefone {
     display: flex;
-    gap: 20px;
+    gap: 1vw;
 }
 
 .contatos__site {
     display: flex;
-    gap: 20px;
+    gap: 1vw;
 }
 
 .contatos__email {
     display: flex;
-    gap: 20px;
+    gap: 1vw;
 }
 
 .texto__telefone {
     font-family: "Jura", sans-serif;
     color: white;
+    font-size: 0.7vw;
 }
 
 .texto__site {
     font-family: "Jura", sans-serif;
     color: white;
+    font-size: 0.7vw;
 }
 
 .texto__email {
     font-family: "Jura", sans-serif;
     color: white;
+    font-size: 0.7vw;
 }
 
 .contatos img {
-    width: 30px;
+    width: 1vw;
 }
