@@ -27,9 +27,9 @@ main {
     align-items: center;
     justify-content: center;
     gap: 10%;
-    width: 30%;
-    height: 55%;
-    padding: 150px;
+    width: 40vw;
+    height: 65vh;
+    padding: 15vw;
     border-radius: 35px;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
     /* transition: transform 1s;
@@ -75,6 +75,7 @@ main {
 .label_input_nome {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 1vw;
 }
 
 #input_nome {
@@ -101,6 +102,7 @@ main {
 .label_input_email {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 1vw;
 }
 
 #input_email {
@@ -127,6 +129,7 @@ main {
 .label_input_data {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 1vw;
 }
 
 #input_data {
@@ -153,6 +156,7 @@ main {
 .label_input_tel {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 1vw;
 }
 
 #input_tel {
@@ -179,6 +183,7 @@ main {
 .label_input_rg {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 1vw;
 }
 
 #input_rg {
@@ -205,6 +210,7 @@ main {
 .label_input_cpf {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 1vw;
 }
 
 #input_cpf {
@@ -231,6 +237,7 @@ main {
 .label_input_cep {
     font-family: "Jura", sans-serif;
     font-weight: 500;
+    font-size: 1vw;
 }
 
 #input_cep {
@@ -257,7 +264,7 @@ main {
 .label_input_endereco {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 100%;
+    font-size: 1vw;
 }
 
 #input_endereco {
@@ -276,13 +283,13 @@ main {
 
 .cadastrar {
     border: none;
-    width: 40%;
-    height: 50px;
+    width: 10vw;
+    height: 7vh;
     border-radius: 10px;
     background-color: #001A47;
     color: white;
     font-family: "Jura", sans-serif;
-    font-size: 15px;
+    font-size: 1vw;
 }
 
 .cadastrar:hover {
