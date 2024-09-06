@@ -4,6 +4,7 @@ import About from "../pages/about";
 import Agenda from "../pages/agenda";
 import Mecv from "../pages/mv";
 import Register from "../pages/register";
+import Login from "../pages/login";
 
 
 export default function RoutesMain() {
@@ -14,6 +15,7 @@ export default function RoutesMain() {
             <Route Component={ Agenda } path="/agenda" />
             <Route Component={ Mecv } path="/mv" />
             <Route Component={ Register } path="/register" />
+            <Route Component={ Login } path="/login" />
         </Routes>
     )
 }
