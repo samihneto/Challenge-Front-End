@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header"
-import "../login.css"
+import "../styles/login.css"
 
 export default function Login() {
     return (
