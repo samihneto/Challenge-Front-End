@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #D9F1FF;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.agenda__titulo {
+    font-family: "Archivo", sans-serif;
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.agenda__conteudo {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2vw;
+    padding: 0.5vw;
+    margin: 4vw;
+}
+
+.conteudo__board {
+    background-color: rgba(255, 255, 255, 0.80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+    width: 60vw;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
+}
+
+.conteudo__agenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    background-color: rgba(255, 255, 255, 0.80);
+    padding: 2vw;
+    width: 20vw;
+    height: 60vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.50);
+}
+
+.txt__agenda {
+    background-color: #001A47;
+    padding: 25px;
+    border-radius: 20px;
+    width: 16vw;
+    position: initial;
+    left: 2vw;
+    color: white;
+    font-family: "Archivo", sans-serif;
+    font-size: 0.6vw;
+    font-weight: 500;
+}
+
+.date {
+    border: none;
+    background-color: #66C5FC;
+    align-self: center;
+    color: #001A47;
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    width: 7vw;
+    height: auto;
+}
+
+.board__texto {
+    font-family: "Archivo", sans-serif;
+    font-size: 0.9vw;
+    font-weight: 300;
+}
+
+.board__titulo {
+    font-family: "Archivo", sans-serif;
+    font-size: 4vw;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 640px) {
+    .agenda__conteudo {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 1vw;
+        justify-content: center;
+    }
+    
+    .conteudo__board {
+        width: 50vw;
+        height: 60vh;
+        overflow: hidden;
+    }
+    
+    .conteudo__agenda {
+        width: 35vw;
+        height: 60vh;
+    }
+
+    .txt__agenda {
+        width: 25vw;
+        height: auto;
+        font-size: 1.5vw;
+    }
+
+    .board__texto {
+        font-size: 2.5vw;
+
+    }
+    
+    .board__titulo {
+        font-size: 4vw;
+    }
+
+    .date {
+        width: 25vw;
+        height: 5vh;
+        margin: 2vh;
+    }
+}

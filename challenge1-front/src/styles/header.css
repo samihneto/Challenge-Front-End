@@ -1,0 +1,48 @@
+.cabecalho {
+    width: 100vw;
+    padding: 15px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.navegacao .paginas {
+    margin-left: 4vw;
+    display: flex;
+    gap: 3vw;
+
+}
+
+.cabecalho .logo {
+    width: 5vw;
+    margin-right: 0;
+}
+
+.cabecalho img {
+    width: 1.5vw;
+}
+
+.cabecalho .procurar {
+    border-radius: 20px;
+    width: 15vw;
+    border: 0.1vw white solid;
+    background-color: black;
+    color: white;
+    align-self: center;
+    padding: 10px;
+}
+
+.paginas .link {
+    font-family: "Jura", sans-serif;
+    font-size: 1vw;
+    text-decoration: none;
+    color: white;
+    /* transition: 0.2s ease-in; */
+
+}
+    .link:hover{
+        color: #B1E2FD;
+
+    }
