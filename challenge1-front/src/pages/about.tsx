@@ -6,8 +6,8 @@ import twitterIcon from "../img/content/about/twitter-preto.png";
 import instagramIcon from "../img/content/about/instagram-preto.png";
 import linkedinIcon from "../img/content/about/linkedin-preto.png";
 import githubIcon from "../img/content/about/github.png";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 import "../styles/about.css"
 
 export default function About() {

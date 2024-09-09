@@ -3,8 +3,8 @@ import "../styles/mv.css";
 import ferramentaImg from "../img/content/mv/tools.png";
 import cameraIcon from "../img/content/mv/camera.png";
 import fileIcon from "../img/content/mv/file.png";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 export default function Mecv() {
     return (
