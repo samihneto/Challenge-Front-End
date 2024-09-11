@@ -14,7 +14,7 @@
     padding: 0;
     height: 350px; 
     width: 450px;
-    box-shadow: 5px 5px 15px 0px black;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
     border-radius: 10px;
 }
 
@@ -34,6 +34,14 @@ h1 {
     font-weight: 800;
     font-size: 18px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.botao__login:hover {
+    scale: 1.1;
+}
+
+.botao__cadastro:hover {
+    scale: 1.1;
 }
 
 .botao__cadastro {

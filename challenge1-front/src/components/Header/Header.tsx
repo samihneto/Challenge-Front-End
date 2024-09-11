@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import logoMV2 from "../../img/header/logo_mv2.png";
-import chatIcon from "../../img/header/chat.png";
+import Chat from '../Chat/Chat';
 
 export default function Header() {
     return (
@@ -15,7 +15,7 @@ export default function Header() {
                 </ul>
             </nav>
             <input type="text" className={styles.procurar} placeholder="O quê você procura?" />
-            <img src={chatIcon} alt="Imagem de Chat" />
+            <Chat />
         </header>
     );
 }
