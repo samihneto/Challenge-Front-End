@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -53,45 +53,39 @@
     border-radius: 100px;
 }
 
-.about .caixa__dois {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    height: auto;
-    width: 80vw;
-    margin: 2vw;
-    padding: 2vw;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px black; 
-}
-
-.about .caixa__tres {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    height: auto;
-    width: 80vw;
-    margin: 2vw;
-    padding: 2vw;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px black;
-}
-
-.about .caixa__quatro {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    height: auto;
-    width: 80vw;
-    margin: 2vw;
-    padding: 2vw;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px black;
-}
 
 .icones {
     width: 15%;
+} */
+
+.about {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o container */
+    overflow: hidden; /* Remove o scroll lateral gigante */
+  }
+
+  .about__titulo {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 5vw;
+    align-self: center;
+    margin-top: 20px;
+    color: #001A47;
 }
+  
+  .caixa__um {
+    width: 100%; /* Faz o card ocupar 100% da largura disponível */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slick-list {
+    overflow: hidden; /* Garante que o scroll lateral não apareça */
+  }

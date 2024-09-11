@@ -1,61 +1,68 @@
+import { IPropsCardAbout } from '../../interface/About.interface'
 import styles from './styles.module.css'
-import andre from "../../img/content/about/andre.jpg";
-import levy from "../../img/content/about/levy.jpg";
-import samir from "../../img/content/about/samir.jpg";
-import repository from "../../img/content/about/repository.png";
-import twitterIcon from "../../img/content/about/twitter-preto.png";
-import instagramIcon from "../../img/content/about/instagram-preto.png";
-import linkedinIcon from "../../img/content/about/linkedin-preto.png";
-import githubIcon from "../../img/content/about/github.png";
+import samir from '../../img/content/about/samir.jpg'
+import levy from '../../img/content/about/levy.jpg'
+import andre from '../../img/content/about/andre.jpg'
+// import repo from '../../img/content/about/repository.png'
+import CardAbout from '../CardAbout/CardAbout'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css'
 
 export default function About() {
+    const membros: IPropsCardAbout[] = [
+      { image: andre, name: "André Geraldi Marcolongo", rm: "rm555285", urlGithub: "https://www.google.com/", urlInstagram: "", urlLinkedin: "" },
+      { image: levy, name: "Felipe Levy Stephens Fidelix", rm: "rm556426", urlGithub: "https://www.youtube.com/", urlInstagram: "", urlLinkedin: "" },
+      { image: samir, name: "Samir Hage Neto", rm: "rm557260", urlGithub: "", urlInstagram: "", urlLinkedin: "" },
+    ]
+  
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1, // Deixe como 1 se você deseja que apareça um card por vez
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+  
     return (
-        <main className={styles.about}>
-            <h1 className={styles.about__titulo}>Sobre nós</h1>
-
-            <section className={styles.caixa__um}>
-                <img className={styles.about__img} src={andre} alt="Foto de André" />
-                <h2 className={styles.about__nome}>ANDRÉ GERALDI MARCOLONGO</h2>
-                <h3 className={styles.about__rm}>RM555285</h3>
-                <div className={styles.caixa__icones}>
-                    <a href=""><img className={styles.icones} src={twitterIcon} alt="Ícone Twitter" /></a>
-                    <a href=""><img className={styles.icones} src={instagramIcon} alt="Ícone Instagram" /></a>
-                    <a href=""><img className={styles.icones} src={linkedinIcon} alt="Ícone Linkedin" /></a>
-                    <a href="https://github.com/andremarko" target="_blank"><img className={styles.icones} src={githubIcon} alt="Ícone Github" /></a>
+      <main className={styles.about}>
+        <h1 className={styles.about__titulo}>Sobre nós</h1>
+        <div style={{ width: '100%', overflow: 'hidden' }}> {/* Remove overflow extra */}
+          <Slider {...settings}>
+            {membros.map((membro: IPropsCardAbout, index: number) => {
+              return (
+                <div key={index}>
+                  <CardAbout
+                    image={membro.image}
+                    name={membro.name}
+                    rm={membro.rm}
+                    urlInstagram={membro.urlInstagram}
+                    urlLinkedin={membro.urlLinkedin}
+                    urlGithub={membro.urlGithub}
+                  />
                 </div>
-            </section>
-
-            <section className={styles.caixa__dois}>
-                <img className={styles.about__img} src={levy} alt="Foto de Felipe Levy" />
-                <h2 className={styles.about__nome}>FELIPE LEVY STEPHENS FYDELIX</h2>
-                <h3 className={styles.about__rm}>RM556426</h3>
-                <div className={styles.caixa__icones}>
-                    <a href=""><img className={styles.icones} src={twitterIcon} alt="Ícone Twitter" /></a>
-                    <a href=""><img className={styles.icones} src={instagramIcon} alt="Ícone Instagram" /></a>
-                    <a href=""><img className={styles.icones} src={linkedinIcon} alt="Ícone Linkedin" /></a>
-                    <a href="https://github.com/felipe-2833" target="_blank"><img className={styles.icones} src={githubIcon} alt="Ícone Github" /></a>
-                </div>
-            </section>
-
-            <section className={styles.caixa__tres}>
-                <img className={styles.about__img} src={samir} alt="Foto de Samir" />
-                <h2 className={styles.about__nome}>SAMIR HAGE NETO</h2>
-                <h3 className={styles.about__rm}>RM557260</h3>
-                <div className={styles.caixa__icones}>
-                    <a href=""><img className={styles.icones} src={twitterIcon} alt="Ícone Twitter" /></a>
-                    <a href=""><img className={styles.icones} src={instagramIcon} alt="Ícone Instagram" /></a>
-                    <a href=""><img className={styles.icones} src={linkedinIcon} alt="Ícone Linkedin" /></a>
-                    <a href="https://github.com/samihneto" target="_blank"><img className={styles.icones} src={githubIcon} alt="Ícone Github" /></a>
-                </div>
-            </section>
-
-            <section className={styles.caixa__quatro}>
-                <img className={styles.about__img} src={repository} alt="Imagem do Repositório" />
-                <h2 className={styles.about__nome}>NOSSO REPOSITÓRIO</h2>
-                <div className={styles.caixa__icones}>
-                    <a href="https://github.com/samihneto/Challenge-Front-End" target="_blank"><img className={styles.icones} src={githubIcon} alt="Ícone GitHub" /></a>
-                </div>
-            </section>
-        </main>
-    )
-}
+              );
+            })}
+          </Slider>
+        </div>
+      </main>
+    );
+  }
