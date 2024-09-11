@@ -5,48 +5,34 @@
 }
 
 .caixa__entrada {
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.80);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10%;
-    width: 40vw;
-    height: 65vh;
-    padding: 15vw;
-    border-radius: 35px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    gap: 10px;
+    width: 450px;
+    height: 1000px;
+    padding: 100px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.30);
     /* transition: transform 1s;
     transform: translateX(0) scale(1.1); */
 }
 
 .caixa__cadastro {
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    row-gap: 30%;
-    justify-items: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
 }
 
 
 .campos {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10%;
-}
-
-.fileira_esquerda {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 10%;
-
-}
-
-.fileira_direita {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 /* Nome */
@@ -59,16 +45,18 @@
 .label_input_nome {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_nome {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_nome:focus {
@@ -86,16 +74,18 @@
 .label_input_email {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_email {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_email:focus {
@@ -113,16 +103,18 @@
 .label_input_data {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_data {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_data:focus {
@@ -140,16 +132,18 @@
 .label_input_tel {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_tel {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_tel:focus {
@@ -167,16 +161,18 @@
 .label_input_rg {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_rg {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_rg:focus {
@@ -194,16 +190,18 @@
 .label_input_cpf {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_cpf {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_cpf:focus {
@@ -221,16 +219,18 @@
 .label_input_cep {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_cep {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_cep:focus {
@@ -248,16 +248,18 @@
 .label_input_endereco {
     font-family: "Jura", sans-serif;
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 20px;
+    padding-left: 15px;
+    color: #001A47;
 }
 
 #input_endereco {
     border: none;
     padding: 10px;
-    width: 8vw;
-    height: 4vh;
+    width: 250px;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 #input_endereco:focus {
@@ -267,13 +269,13 @@
 
 .cadastrar {
     border: none;
-    width: 10vw;
-    height: 7vh;
+    width: 150px;
+    height: 50px;
     border-radius: 10px;
     background-color: #001A47;
     color: white;
     font-family: "Jura", sans-serif;
-    font-size: 1vw;
+    font-size: 14px;
 }
 
 .cadastrar:hover {

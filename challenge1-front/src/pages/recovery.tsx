@@ -1,32 +1,16 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
+import News from "../components/News/News";
+import Recovery from "../components/Recovery/Recovery";
+import styles from '../styles/styles.module.css';
 
-export default function Recovery() {
+export default function recovery() {
     return (
         <div>
             <Header />
-            <main>
-                <section className="caixa__entrada">
-                    <form name="recuperar__form" id="recuperar__form" action="" method="post">
-                        <div className="inputs">
-                            <input
-                                type="text"
-                                name="recuperar__usuario"
-                                id="recuperar__usuario"
-                                required
-                                placeholder="Digite seu usuário"
-                            />
-                            <input
-                                type="email"
-                                name="recuperar__email"
-                                id="recuperar__email"
-                                required
-                                placeholder="Digite seu email"
-                            />
-                        </div>
-                        <button className="enviar" type="submit">RECUPERAR SENHA</button>
-                    </form>
-                </section>
+            <main className={styles.parte__conteudo}>
+                <Recovery />
+                <News />
             </main>
             <Footer />
         </div>

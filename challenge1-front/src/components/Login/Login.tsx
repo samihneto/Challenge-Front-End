@@ -35,7 +35,7 @@ export default function Login() {
                                         Lembrar de mim
                                     </label>
                                 </div>
-                                <a href="../pages/recuperarsenha.html" className={styles.esqueceu}>
+                                <a href="/recovery" className={styles.esqueceu}>
                                     Esqueceu a senha?
                                 </a>
                             </div>

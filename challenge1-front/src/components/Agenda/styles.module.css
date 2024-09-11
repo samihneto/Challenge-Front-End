@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.agenda__titulo {
+    font-family: "Archivo", sans-serif;
+    font-size: 4vw;
+    font-weight: 700;
+    color: #001A47;
+}
+
+.agenda__conteudo {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+.board__msg {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+.board__input {
+    border: none;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+    width: 600px;
+    height: 50px;
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+}
+
+.board__input:focus {
+    border: none;
+    outline: 0;
+}
+
+
+
+.board__button {
+    border: none;
+    padding: 10px;
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9F1FF;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+.board__button:hover {
+    scale: 1.1;
+}
+
+.board__send {
+    width: 30px;
+    align-self: center;
+    justify-self: center;
+    color: white;
+}
+
+.conteudo__board {
+    background-color: rgba(255, 255, 255, 0.80);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+    width: 1200px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+.conteudo__agenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    background-color: rgba(255, 255, 255, 0.80);
+    padding: 2vw;
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+.agenda__entrada {
+    display: flex;
+}
+
+.agenda__nota {
+    background-color: white;
+    border-radius: 50px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+    font-size: 12px;
+    
+}
+
+.txt__agenda {
+    background-color: #001A47;
+    padding: 25px;
+    border-radius: 20px;
+    width: 16vw;
+    position: initial;
+    left: 2vw;
+    color: white;
+    font-family: "Archivo", sans-serif;
+    font-size: 0.6vw;
+    font-weight: 500;
+}
+
+.date {
+    border: none;
+    background-color: #66C5FC;
+    align-self: center;
+    color: #001A47;
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    width: 7vw;
+    height: auto;
+}
+
+.board__texto {
+    font-family: "Archivo", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 40px;
+    border: 2px solid #001A47; 
+    border-radius: 15px;
+    color: #001A47;
+}
+
+.board__titulo {
+    font-family: "Archivo", sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #001A47;
+}
+
+@media (max-width: 640px) {
+    .agenda__conteudo {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 1vw;
+        justify-content: center;
+    }
+    
+    .conteudo__board {
+        width: 50vw;
+        height: 60vh;
+        overflow: hidden;
+    }
+    
+    .conteudo__agenda {
+        width: 35vw;
+        height: 60vh;
+    }
+
+    .txt__agenda {
+        width: 25vw;
+        height: auto;
+        font-size: 1.5vw;
+    }
+
+    .board__texto {
+        font-size: 2.5vw;
+
+    }
+    
+    .board__titulo {
+        font-size: 4vw;
+    }
+
+    .date {
+        width: 25vw;
+        height: 5vh;
+        margin: 2vh;
+    }
+}
