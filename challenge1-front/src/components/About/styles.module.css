@@ -4,21 +4,6 @@
     box-sizing: border-box;
 }
 
-/* main {
-    background-color: #D9F1FF;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    gap: 10px;
-    height: auto;
-    width: 100vw;
-    margin: 0;
-} */
-
 
 
 .about__titulo {
@@ -109,10 +94,4 @@
 
 .icones {
     width: 15%;
-}
-
-@media (max-width: 1024px) {
-    main {
-        height: 100vh;
-    }
 }

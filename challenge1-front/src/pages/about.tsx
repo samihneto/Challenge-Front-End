@@ -8,7 +8,6 @@ import linkedinIcon from "../img/content/about/linkedin-preto.png";
 import githubIcon from "../img/content/about/github.png";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import "../styles/about.css"
 
 export default function About() {
     return (

@@ -2,7 +2,6 @@ import styles from './styles.module.css'
 
 export default function News() {
     return (
-        <main>
             <section className={styles.conteudo}>
                 <div className={styles.imagem}>
                     <img className={styles.img} src="https://futuretransport.com.br/wp-content/uploads/2018/06/renault-porto-seguro-678x381.jpg" alt="" />
@@ -21,6 +20,5 @@ export default function News() {
                     </p>
                 </div>
             </section>
-        </main>
     )
 }

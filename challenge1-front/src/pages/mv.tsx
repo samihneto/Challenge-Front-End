@@ -1,5 +1,3 @@
-
-import "../styles/mv.css";
 import ferramentaImg from "../img/content/mv/tools.png";
 import cameraIcon from "../img/content/mv/camera.png";
 import fileIcon from "../img/content/mv/file.png";

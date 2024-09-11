@@ -1,11 +1,11 @@
 import styles from './styles.module.css';
-import logoMV from "../../img/header/logo_mv.png";
+import logoMV2 from "../../img/header/logo_mv2.png";
 import chatIcon from "../../img/header/chat.png";
 
 export default function Header() {
     return (
         <header className={styles.cabecalho}>
-            <img className={styles.logo} src={logoMV} alt="Logotipo do Mecânico Virtual" />
+            <img className={styles.logo} src={logoMV2} alt="Logotipo do Mecânico Virtual" />
             <nav className={styles.navegacao}>
                 <ul className={styles.paginas}>
                     <li><a className={styles.link} href="/">HOME</a></li>

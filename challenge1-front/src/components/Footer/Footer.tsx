@@ -29,20 +29,20 @@ export default function Footer() {
                             </a>
                         </li>
                     </ul>
-                    <ul>
+                    {/* <ul>
                         <li>
                             <a href="">
                                 <img src={tiktok} alt="Icone do Tiktok" />
                             </a>
                         </li>
-                    </ul>
-                    <ul>
+                    </ul> */}
+                    {/* <ul>
                         <li>
                             <a href="">
                                 <img src={facebook} alt="Icone do Facebook" />
                             </a>
                         </li>
-                    </ul>
+                    </ul> */}
                     <ul>
                         <li>
                             <a href="">
@@ -57,13 +57,13 @@ export default function Footer() {
                             </a>
                         </li>
                     </ul>
-                    <ul>
+                    {/* <ul>
                         <li>
                             <a href="">
                                 <img src={twitter} alt="Icone do Twitter" />
                             </a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
 

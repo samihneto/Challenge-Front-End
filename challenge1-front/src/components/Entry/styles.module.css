@@ -4,38 +4,50 @@
     box-sizing: border-box;
 }
 
-
-
-/* Conteúdo */
-/* main {
-    background-color: #D9F1FF;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    gap: 50px;
-    height: 100vh;
-    width: 100vw;
-} */
-
 .entry__conteudo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.80);
-    margin: 4vw;
-    padding: 5vw;
-    height: 70vh;
-    width: 75vw;
-    max-width: 100%;
+    padding: 0;
+    height: 350px; 
+    width: 450px;
     box-shadow: 5px 5px 15px 0px black;
     border-radius: 10px;
 }
 
+h1 {
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+}
+
+.botao__login {
+    border: none;
+    background-color: #001A47;
+    color: white;
+    width: 160px;
+    height: 60px;
+    border-radius: 5px;
+    font-family: "Jura", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.botao__cadastro {
+    border: none;
+    background-color: #D9F1FF;
+    color: #001A47;
+    width: 160px;
+    height: 60px;
+    border-radius: 5px;
+    font-family: "Jura", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 @media (max-width: 640px) {
     .conteudo {

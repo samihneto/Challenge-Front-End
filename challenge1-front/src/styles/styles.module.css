@@ -1,0 +1,9 @@
+.parte__conteudo {
+    background-color: #D9F1FF;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 100px;
+    align-items: flex-start;
+    justify-content: center;
+} 
