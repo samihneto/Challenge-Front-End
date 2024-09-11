@@ -8,10 +8,10 @@ export default function Home() {
     return (
         <div>
             <Header />
-            <main className={styles.parte__conteudo}>
+            <div className={styles.parte__conteudo}>
                 <Entry />
                 <News />
-            </main>
+            </div>
             <Footer />
         </div>
     )

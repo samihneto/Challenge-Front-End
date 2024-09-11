@@ -14,7 +14,7 @@ export default function Header() {
                     <li><a className={styles.link} href="/about">SOBRE NÓS</a></li>
                 </ul>
             </nav>
-            <input type="text" className={styles.procurar} placeholder="O quê você procura?" />
+            <input type="text" className={styles.procurar} placeholder="O quê você procura?"  />
             <Chat />
         </header>
     );

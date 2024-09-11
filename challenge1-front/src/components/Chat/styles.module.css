@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 50;
   }
   
   .modal__content {
@@ -34,7 +35,7 @@
   }
 
   .open__button {
-    background-color: black;
+    background-color: #00102c;
     font-size: 36px;
     color: white;
     cursor: pointer;
@@ -44,7 +45,6 @@
   .open__button:hover {
     scale: 1.1;
   }
-
 
 .chat__titulo {
     font-family: "Jura", sans-serif;

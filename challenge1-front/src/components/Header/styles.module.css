@@ -1,7 +1,7 @@
 .cabecalho {
     width: 100vw;
     padding: 15px;
-    background-color: black;
+    background-color: #00102c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,13 +25,29 @@
 }
 
 .cabecalho .procurar {
-    border-radius: 20px;
-    width: 15vw;
+    border-radius: 40px;
+    width: 400px;
+    height: 50px;
     border: 0.1vw white solid;
-    background-color: black;
+    background-color: #00102c;
     color: white;
     align-self: center;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-family: "Jura", sans-serif;
+}
+
+.procurar::placeholder {
     padding: 10px;
+    background-image: url(../../img/header/lupa.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.procurar:focus {
+    outline: 0
 }
 
 .paginas .link {
@@ -44,5 +60,4 @@
 }
     .link:hover{
         color: #B1E2FD;
-
     }

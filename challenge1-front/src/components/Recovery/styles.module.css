@@ -5,7 +5,7 @@
 }
 
 .caixa__entrada {
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
