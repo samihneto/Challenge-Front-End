@@ -61,21 +61,30 @@
 .about {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Centraliza o container */
-    overflow: hidden; /* Remove o scroll lateral gigante */
+    margin-bottom: 50px;
+    overflow: hidden; 
   }
 
   .about__titulo {
     font-family: "Archivo", sans-serif;
     font-weight: 900;
-    font-size: 5vw;
-    align-self: center;
+    font-size: 100px;
+    justify-self: center;
     margin-top: 20px;
-    color: #001A47;
+    color: white;
+}
+
+.about__texto {
+  font-family: "Archivo", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
 }
   
   .caixa__um {
-    width: 100%; /* Faz o card ocupar 100% da largura disponível */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,5 +96,5 @@
   }
   
   .slick-list {
-    overflow: hidden; /* Garante que o scroll lateral não apareça */
+    overflow: hidden;
   }

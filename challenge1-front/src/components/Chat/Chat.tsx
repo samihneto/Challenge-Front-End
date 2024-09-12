@@ -1,6 +1,6 @@
 import styles from './styles.module.css'
 import { useState } from 'react';
-import { FaComments, FaTimes } from 'react-icons/fa'; // Importa os ícones
+import { FaComments, FaTimes } from 'react-icons/fa';
 import Send from '../../img/content/agenda/send.png'
 
 export default function Chat() {

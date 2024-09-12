@@ -7,6 +7,8 @@
     width: 100vw;
     bottom: 0px;
     padding: 15px;
+    position: relative;
+    bottom: 0;
 }
 
 .redes__sociais .redes__titulo {
@@ -50,19 +52,18 @@
 .redes__icones {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    justify-items: center;
+    gap: 20px;
 }
 
 .redes__icones ul {
     list-style-type: none;
 }
 
-.redes__sociais img{
-    margin: 0.2vw;
-    padding: 0;
-    width: 40px;
+.icones {
+    color: white;
+    border-radius: 20px;
+    font-size: 40px;
 }
 
 .contatos {

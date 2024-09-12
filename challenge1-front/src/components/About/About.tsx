@@ -45,6 +45,14 @@ export default function About() {
     return (
       <main className={styles.about}>
         <h1 className={styles.about__titulo}>Sobre nós</h1>
+        <p className={styles.about__texto}>
+          Nós somos uma equipe criada na Instituição FIAP Paulista, composta por alunos dedicados ao estudo e ao progresso de novas tecnologias.
+          <br />
+          O nosso foco como equipe é trazer soluções rápidas e de boa acessibilidade para nossos clientes, sempre buscando por conhecer novos caminhos
+          e interagir com novas pessoas.
+          <br />
+          Sinta-se livre para nos comunicar, caso interessados em nossos serviços!
+        </p>
         <div style={{ width: '100%', overflow: 'hidden' }}> {/* Remove overflow extra */}
           <Slider {...settings}>
             {membros.map((membro: IPropsCardAbout, index: number) => {

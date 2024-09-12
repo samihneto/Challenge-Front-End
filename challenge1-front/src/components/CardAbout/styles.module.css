@@ -37,7 +37,7 @@
 .caixa__icones {
 
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .about__img {
@@ -48,5 +48,5 @@
 .icones {
     color: #001A47;
     border-radius: 20px;
-    width: 50px;
+    font-size: 50px;
 }

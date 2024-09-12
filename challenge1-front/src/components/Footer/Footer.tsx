@@ -1,16 +1,11 @@
 import styles from './styles.module.css'
-import instagram from "../../img/footer/redes/instagram.png";
-import tiktok from "../../img/footer/redes/tiktok.png";
-import facebook from "../../img/footer/redes/facebook.png";
-import linkedin from "../../img/footer/redes/linkedin.png";
-import youtube from "../../img/footer/redes/youtube.png";
-import twitter from "../../img/footer/redes/twitter.png";
 import portoLogo from "../../img/footer/porto_logo.png";
 import googlePlay from "../../img/footer/googleplay.png";
 import appStore from "../../img/footer/appstore.png";
 import telefoneIcon from "../../img/footer/icones_contato/telefone.png";
 import siteIcon from "../../img/footer/icones_contato/site.png";
 import emailIcon from "../../img/footer/icones_contato/email.png";
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
     return (
@@ -25,7 +20,7 @@ export default function Footer() {
                     <ul>
                         <li>
                             <a href="">
-                                <img src={instagram} alt="Icone do Instagram" />
+                                <FaInstagram className={styles.icones}  />
                             </a>
                         </li>
                     </ul>
@@ -46,14 +41,14 @@ export default function Footer() {
                     <ul>
                         <li>
                             <a href="">
-                                <img src={linkedin} alt="Icone do Linkedin" />
+                                <FaLinkedin className={styles.icones}  />
                             </a>
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <a href="">
-                                <img src={youtube} alt="Icone do Youtube" />
+                                <FaGithub className={styles.icones}  />
                             </a>
                         </li>
                     </ul>
