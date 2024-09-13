@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .caixa__um {
     display: flex;
     flex-direction: row;
@@ -35,7 +29,6 @@
 }
 
 .caixa__icones {
-
     display: flex;
     gap: 20px;
 }
@@ -49,4 +42,67 @@
     color: #001A47;
     border-radius: 20px;
     font-size: 50px;
+}
+
+@media (max-width: 1440px) {
+    .about__nome {
+        font-size: 32px;
+    }
+
+    .about__rm {
+        font-size: 1.4vw;
+    }
+
+    .about__img {
+        width: 12%;
+    }
+
+    .icones {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .caixa__um {
+        flex-direction: column;
+        padding: 3vw;
+    }
+
+    .about__nome {
+        font-size: 28px;
+    }
+
+    .about__rm {
+        font-size: 1.8vw;
+    }
+
+    .about__img {
+        width: 15%;
+    }
+
+    .icones {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .caixa__um {
+        padding: 4vw;
+    }
+
+    .about__nome {
+        font-size: 24px;
+    }
+
+    .about__rm {
+        font-size: 3vw;
+    }
+
+    .about__img {
+        width: 20%;
+    }
+
+    .icones {
+        font-size: 35px;
+    }
 }
