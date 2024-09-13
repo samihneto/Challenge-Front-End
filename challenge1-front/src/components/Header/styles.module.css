@@ -1,29 +1,23 @@
 .cabecalho {
-    width: 100vw;
+    width: 100%;
     padding: 15px;
     background-color: #00102c;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4vw;
+    gap: 100px;
 }
 
 .navegacao .paginas {
-    margin-left: 4vw;
     display: flex;
-    gap: 3vw;
+    gap: 50px;
 
 }
 
 .cabecalho .logo {
-    width: 5vw;
+    width: 200px;
     margin-right: 0;
 }
-
-.cabecalho img {
-    width: 1.5vw;
-}
-
 
 .cabecalho .procurar {
     border-radius: 40px;
@@ -58,12 +52,115 @@
 
 .paginas .link {
     font-family: "Jura", sans-serif;
-    font-size: 1vw;
+    font-size: 24px;
     text-decoration: none;
     color: white;
-    /* transition: 0.2s ease-in; */
-
 }
     .link:hover{
         color: #B1E2FD;
+    }
+
+@media (max-width: 1440px) {
+        .cabecalho {
+            gap: 50px;
+        }
+
+        .navegacao .paginas {
+            gap: 40px;
+        
+        }
+        
+        .cabecalho .logo {
+            width: 180px;
+            margin-right: 0;
+        }
+        
+        .cabecalho img {
+            width: 100px;
+        }
+        
+        
+        .cabecalho .procurar {
+            width: 300px;
+            height: 50px;
+            padding: 15px;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        
+        .procurar::placeholder {
+            padding: 10px;
+            background-size: 25px;
+        }       
+        
+        .paginas .link {
+            font-size: 18px;
+        }
+
+    }
+
+    @media (max-width: 1024px) {
+        .cabecalho {
+            gap: 50px;
+        }
+
+        .navegacao .paginas {
+            gap: 40px;
+        
+        }
+        
+        .cabecalho .logo {
+            width: 180px;
+            margin-right: 0;
+        }
+        
+        .cabecalho img {
+            width: 100px;
+        }
+        
+        
+        .cabecalho .procurar {
+            display: none;
+        }
+        
+        .procurar::placeholder {
+            padding: 10px;
+            background-size: 25px;
+        }       
+        
+        .paginas .link {
+            font-size: 18px;
+        }
+
+    }
+
+    @media (max-width: 640px) {
+        .cabecalho {
+            gap: 30px;
+            flex-direction: column;
+        }
+
+        .navegacao .paginas {
+            gap: 30px;
+        
+        }
+        
+        .cabecalho .logo {
+            width: 180px;
+            margin-right: 0;
+        }
+        
+        .cabecalho img {
+            width: 100px;
+        }
+        
+        .procurar::placeholder {
+            padding: 10px;
+            background-size: 25px;
+        }       
+        
+        .paginas .link {
+            font-size: 18px;
+        }
+
     }

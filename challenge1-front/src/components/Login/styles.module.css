@@ -16,7 +16,6 @@
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.30);
     padding: 100px;
     border-radius: 10px;
-
 }
 
 #login__form {
@@ -78,13 +77,13 @@
 
 .enviar {
     font-family: "Jura", sans-serif;
-    font-size: 0.8vw;
+    font-size: 16px;
     border: none;
     border-radius: 10px;
     background-color: #001A47;
     color: white;
-    width: 7vw;
-    height: 6vh;
+    width: 100px;
+    height: 50px;
 }
 
 .enviar:hover {
@@ -122,95 +121,19 @@
     font-size: 12px;
 }
 
+@media(max-width: 1440xp) {
+
+}
+
 @media(max-width: 1024px) {
-    .caixa__entrada {
-        width: 50vw;
-        height: 60vh;
-        padding: 100px;
-    }
-    
-    #login__usuario {
-        width: 20vw;
-        height: 4vh;
-    }
 
-    .inputs__senha {
-        gap: 0.5vh;
-    }
-    
-    #login__senha {
-        width: 20vw;
-        height: 4vh;
-    }
-    
-    .esqueceu {
-        font-size: 1vw;
-    }
-
-    .lembrar {
-        font-size: 1vw;
-    }
-    
-    .enviar {
-        font-size: 1.5vw;
-        width: 8vw;
-        height: 4vh;
-    }
-    
-    #login__usuario::placeholder {
-        font-size: 1vw;
-    }
-    
-    #login__senha::placeholder {
-        font-size: 1vw;
-    }
-    
-    .label__check {
-        font-size: 1vw;
-    }
 }
 
 @media(max-width: 640px) {
     .caixa__entrada {
-        width: 70vw;
-        height: 60vh;
+        height: 350px; 
+        width: 300px;
         padding: 100px;
-    }
-    
-    #login__usuario {
-        width: 35vw;
-        height: 4vh;
-    }
-
-    .inputs__senha {
-        gap: 0.5vh;
-    }
-    
-    #login__senha {
-        width: 35vw;
-        height: 4vh;
-    }
-    
-    .esqueceu {
-        font-size: 2vw;
-    }
-    
-
-    .enviar {
-        font-size: 2.5vw;
-        width: 17vw;
-        height: 4vh;
-    }
-    
-    #login__usuario::placeholder {
-        font-size: 2vw;
-    }
-    
-    #login__senha::placeholder {
-        font-size: 2vw;
-    }
-    
-    .label__check {
-        font-size: 2vw;
+        border-radius: 10px;
     }
 }

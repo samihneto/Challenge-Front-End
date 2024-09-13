@@ -4,7 +4,7 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     bottom: 0px;
     padding: 15px;
     position: relative;
@@ -17,24 +17,24 @@
     margin-bottom: 0.5vw;
     font-family: "Jura", sans-serif;
     color: white;
-    font-size: 1.5vw;
+    font-size: 24px;
     padding-left: 25px;
 }
 
 .rodape .rodape__logo {
-    width: 7vw;
+    width: 100px;
     
 
 }
 .rodape .rodape__play {
-    width: 12vw;
+    width: 250px;
     border-left: 2px white solid;
     margin-right: 0px;
     padding-left: 20px;
 }
 
 .rodape .rodape__app {
-    width: 10vw;
+    width: 220px;
     padding-top: 0.2vw;
     padding-bottom: 0.2vw;
     margin-right: 0;
@@ -62,8 +62,8 @@
 
 .icones {
     color: white;
-    border-radius: 20px;
-    font-size: 40px;
+    border-radius: 0;
+    font-size: 32px;
 }
 
 .contatos {
@@ -79,37 +79,161 @@
 
 .contatos__telefone {
     display: flex;
-    gap: 1vw;
+    gap: 20px;
 }
 
 .contatos__site {
     display: flex;
-    gap: 1vw;
+    gap: 20px;
 }
 
 .contatos__email {
     display: flex;
-    gap: 1vw;
+    gap: 20px;
 }
 
 .texto__telefone {
     font-family: "Jura", sans-serif;
     color: white;
-    font-size: 0.7vw;
+    font-size: 14px;
 }
 
 .texto__site {
     font-family: "Jura", sans-serif;
     color: white;
-    font-size: 0.7vw;
+    font-size: 14px;
 }
 
 .texto__email {
     font-family: "Jura", sans-serif;
     color: white;
-    font-size: 0.7vw;
+    font-size: 14px;
 }
 
 .contatos img {
-    width: 1vw;
+    width: 20px;
+}
+
+@media (max-width: 1440px) {
+    .rodape {
+        gap: 10px;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .redes__sociais .redes__titulo {
+        margin-bottom: 0.5vw;
+        font-size: 24px;
+        padding-left: 25px;
+    }
+    
+    .rodape .rodape__logo {
+        width: 100px;
+        
+    
+    }
+    .rodape .rodape__play {
+        width: 205px;
+        margin-right: 0px;
+        padding-left: 20px;
+    }
+    
+    .rodape .rodape__app {
+        width: 185px;
+        padding-top: 0.2vw;
+        padding-bottom: 0.2vw;
+        margin-right: 0;
+        padding-right: 20px;
+    }
+    
+    .redes__icones {
+        gap: 10px;
+    }
+    
+    .icones {
+        border-radius: 0;
+        font-size: 32px;
+    }
+    
+    .contatos {
+        margin-left: 10px;
+        padding-left: 40px;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .contatos__telefone {
+        gap: 10px;
+    }
+    
+    .contatos__site {
+        gap: 10px;
+    }
+    
+    .contatos__email {
+        gap: 10px;
+    }
+    
+    .texto__telefone {
+        font-size: 14px;
+    }
+    
+    .texto__site {
+        font-size: 14px;
+    }
+    
+    .texto__email {
+        font-size: 14px;
+    }
+    
+    .contatos img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 1024px) { 
+    .rodape .rodape__logo {
+        width: 130px;
+    }
+
+    .rodape .redes__sociais {
+        display: none;
+    }
+
+    .rodape .rodape__play {
+        display: none;
+    }
+    
+    .rodape .rodape__app {
+        display: none;
+    }
+
+    .contatos__telefone {
+        gap: 10px;
+    }
+    
+    .contatos__site {
+        gap: 10px;
+    }
+    
+    .contatos__email {
+        gap: 10px;
+    }
+    
+    .texto__telefone {
+        font-size: 14px;
+    }
+    
+    .texto__site {
+        font-size: 14px;
+    }
+    
+    .texto__email {
+        font-size: 14px;
+    }
+    
+    .contatos img {
+        width: 20px;
+    }
 }
