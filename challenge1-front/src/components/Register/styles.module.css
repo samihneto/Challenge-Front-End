@@ -1,15 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
 .caixa__entrada {
-    background-color: rgba(255, 255, 255, 1);
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 450px;
-    height: 1000px;
-    padding: 100px;
+    height: 900px;
+    padding: 0px;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.30);
+    overflow: scroll;
 }
 
 .caixa__cadastro {
@@ -17,14 +44,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 40px;
 }
-
 
 .campos {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 25px;
 }
 
 .cadastro__nome, .cadastro__email, .cadastro__data, .cadastro__telefone, .cadastro__rg, .cadastro__cpf, .cadastro__cep, .cadastro__endereco {
@@ -42,7 +68,7 @@
     color: #001A47;
 }
 
-#input_nome, #input_email, #input_data, #input_tel, #input_rg, #input_cpf, #input_cep, #input_endereco  {
+#input_nome, #input_email, #input_data, #input_tel, #input_rg, #input_cpf, #input_cep, #input_endereco {
     border: none;
     padding: 10px;
     width: 250px;
@@ -65,37 +91,24 @@
     color: white;
     font-family: "Jura", sans-serif;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .cadastrar:hover {
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 @media (max-width: 640px) {
     .caixa__entrada {
-        gap: 10px;
         width: 350px;
         height: 1000px;
     }
 
-    .cadastro__nome, .cadastro__email, .cadastro__data, .cadastro__telefone, .cadastro__rg, .cadastro__cpf, .cadastro__cep, .cadastro__endereco {
-        gap: 5px;
+    .campos {
+        gap: 25px;
     }
 
-    .label_input_nome, .label_input_email, .label_input_data, .label_input_tel, .label_input_rg, .label_input_cpf, .label_input_cep, 
-    .label_input_endereco {
-        font-size: 20px;
-        padding-left: 15px;
-    }
-    
-    #input_nome, #input_email, #input_data, #input_tel, #input_rg, #input_cpf, #input_cep, #input_endereco  {
-        padding: 10px;
+    #input_nome, #input_email, #input_data, #input_tel, #input_rg, #input_cpf, #input_cep, #input_endereco {
         width: 250px;
-        height: 40px;
-    }
-    
-    #input_nome:focus, #input_email:focus, #input_data:focus, #input_tel:focus, #input_rg:focus, #input_cpf:focus, #input_cep:focus, #input_endereco:focus {
-        border: none;
-        outline: 0;
     }
 }

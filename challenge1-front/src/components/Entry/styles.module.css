@@ -1,7 +1,49 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.openModalButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: "Jura", sans-serif;
+    background-color: #001A47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.openModalButton:hover {
+    scale: 1.1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background-color: rgba(255, 255, 255, 1);
+    width: 450px;
+    height: auto;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .entry__conteudo {
@@ -10,12 +52,34 @@
     gap: 10px;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: transparent;
     padding: 0;
-    height: 350px; 
-    width: 450px;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
-    border-radius: 10px;
+}
+
+.botao__login, .botao__cadastro {
+    border: none;
+    width: 160px;
+    height: 60px;
+    border-radius: 5px;
+    font-family: "Jura", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.botao__login {
+    background-color: #001A47;
+    color: white;
+}
+
+.botao__login:hover, .botao__cadastro:hover {
+    transform: scale(1.1);
+}
+
+.botao__cadastro {
+    background-color: #D9F1FF;
+    color: #001A47;
 }
 
 h1 {
@@ -23,57 +87,15 @@ h1 {
     font-family: "Jura", sans-serif;
 }
 
-.botao__login {
-    border: none;
-    background-color: #001A47;
-    color: white;
-    width: 160px;
-    height: 60px;
-    border-radius: 5px;
-    font-family: "Jura", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.botao__login:hover {
-    scale: 1.1;
-}
-
-.botao__cadastro:hover {
-    scale: 1.1;
-}
-
-.botao__cadastro {
-    border: none;
-    background-color: #D9F1FF;
-    color: #001A47;
-    width: 160px;
-    height: 60px;
-    border-radius: 5px;
-    font-family: "Jura", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
 @media (max-width: 640px) {
-    .conteudo {
-        flex-direction: column;
-        gap: 5vw;
-        justify-items: center;
+    .modal {
+        width: 70%;
     }
 
-    .imagem img{
-        width: 100%;
-    }
 
-    .conteudo .conteudo__titulo {
-        margin-bottom: 0.5vh;
-        font-size: 6vw;
-    }
-    
-    .conteudo__texto{
-        font-size: 1.6vw;
+    .botao__login, .botao__cadastro {
+        width: 100px;
+        font-size: 16px;
     }
 }

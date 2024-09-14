@@ -1,4 +1,3 @@
-import Entry from "../components/Entry/Entry"
 import Footer from "../components/Footer/Footer"
 import Header from "../components/Header/Header"
 import News from "../components/News/News"
@@ -9,7 +8,6 @@ export default function Home() {
         <div>
             <Header />
             <div className={styles.parte__conteudo}>
-                <Entry />
                 <News />
             </div>
             <Footer />

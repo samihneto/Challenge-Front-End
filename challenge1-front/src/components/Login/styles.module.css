@@ -1,30 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .caixa__entrada {
-    background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    height: 450px; 
+    gap: 40px;
+    height: 450px;
     width: 450px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.30);
     padding: 100px;
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
 }
 
 #login__form {
     display: grid;
     grid-template-rows: auto;
-    row-gap: 0.1vh;
+    row-gap: 10px;
     align-items: center;
     justify-items: center;
-    align-items: center;
 }
 
 .inputs {
@@ -35,13 +47,19 @@
     gap: 20px;
 }
 
-#login__usuario {
+#login__usuario, #login__senha {
     border: none;
     border-radius: 35px;
     padding: 20px;
     width: 250px;
     height: 50px;
-    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.20);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.esqueceu {
+    text-decoration: none;
+    font-family: "Jura", sans-serif;
+    font-size: 12px;
 }
 
 .inputs__senha {
@@ -56,23 +74,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-}
-
-#login__senha {
-    border: none;
-    border-radius: 35px;
-    padding: 20px;
-    width: 250px;
-    height: 50px;
-    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.20);
-}
-
-.esqueceu {
-    padding-left: 10px;
-    text-decoration: none;
-    font-family: "Jura", sans-serif;
-    font-size: 12px;
+    gap: 20px;
 }
 
 .enviar {
@@ -84,10 +86,20 @@
     color: white;
     width: 100px;
     height: 50px;
+    cursor: pointer;
 }
 
 .enviar:hover {
-    scale: 1.1;
+    transform: scale(1.1);
+}
+
+.lembrar {
+    padding-left: 10px;
+}
+
+.label__check {
+    font-family: "Jura", sans-serif;
+    font-size: 12px;
 }
 
 #login__usuario::placeholder {
@@ -112,28 +124,11 @@
     outline: 0;
 }
 
-.lembrar {
-    padding-left: 10px;
-}
 
-.label__check {
-    font-family: "Jura", sans-serif;
-    font-size: 12px;
-}
-
-@media(max-width: 1440xp) {
-
-}
-
-@media(max-width: 1024px) {
-
-}
-
-@media(max-width: 640px) {
+@media (max-width: 640px) {
     .caixa__entrada {
-        height: 350px; 
-        width: 300px;
-        padding: 100px;
-        border-radius: 10px;
+        width: 90%;
+        height: auto;
+        padding: 50px;
     }
 }

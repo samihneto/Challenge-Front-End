@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import logoMV2 from "../../img/header/logo_mv2.png";
 import Chat from '../Chat/Chat';
+import Entry from '../Entry/Entry';
 
 export default function Header() {
     return (
@@ -15,6 +16,7 @@ export default function Header() {
                 </ul>
             </nav>
             <input type="text" className={styles.procurar} placeholder="O quê você procura?"  />
+            <Entry />
             <Chat />
         </header>
         
