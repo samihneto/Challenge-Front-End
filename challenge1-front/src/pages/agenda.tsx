@@ -1,4 +1,4 @@
-import Agenda from "../components/Agenda/Agenda";
+import ChatMV from "../components/ChatMV/ChatMV";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import styles from '../styles/styles.module.css';
@@ -8,7 +8,7 @@ export default function agenda() {
         <div>
             <Header />
             <main className={styles.parte__conteudo}>
-                <Agenda />
+                <ChatMV />
             </main>
             <Footer />
         </div>

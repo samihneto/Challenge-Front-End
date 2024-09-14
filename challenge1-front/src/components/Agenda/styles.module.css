@@ -1,81 +1,66 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.agenda__titulo {
-    font-family: "Archivo", sans-serif;
-    font-size: 72px;
-    font-weight: 700;
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+  
+  .modal__content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close__button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
     color: #001A47;
+  }
+  
+  .btn__modal {
+    background-color: #001A47;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-family: "Jura", sans-serif;
+    width: 200px;
+    height: 75px;
+    border-radius: 10px;
+  }
+
+  .btn__modal:hover {
+    scale: 1.1;
+  }
+
+  .agenda__titulo {
+    font-size: 58px;
+    font-weight: 800;
 }
 
 .agenda__conteudo {
     display: flex;
     flex-direction: row;
-    gap: 30px;
-    padding: 40px;
-}
-
-.board__msg {
-   display: flex;
-   align-items: center;
-   gap: 20px;
-}
-
-.board__input {
-    border: none;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
-    width: 600px;
-    height: 50px;
-    border-radius: 40px;
+    justify-content: center;
     padding: 20px;
-    font-size: 20px;
-    font-family: "Jura", sans-serif;
-}
-
-.board__input:focus {
-    border: none;
-    outline: 0;
-}
-
-
-
-.board__button {
-    border: none;
-    padding: 10px;
-    border-radius: 60px;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9F1FF;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
-}
-
-.board__button:hover {
-    scale: 1.1;
-}
-
-.board__send {
-    width: 30px;
-    align-self: center;
-    justify-self: center;
-    color: white;
-}
-
-.conteudo__board {
-    background-color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    gap: 20px;
-    width: 70%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+    gap: 30px;
 }
 
 .conteudo__agenda {
@@ -83,13 +68,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1vw;
+    gap: 10px;
     background-color: rgba(255, 255, 255, 1);
-    padding: 2vw;
+    padding: 0;
     width: 30%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
 .agenda__entrada {
@@ -99,27 +83,24 @@
 .agenda__nota {
     background-color: white;
     border-radius: 50px;
+    border: 0;
     align-self: center;
     justify-content: center;
     align-items: center;
     padding: 25px;
-    width: 150px;
+    width: 300px;
     height: 50px;
     box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
     font-size: 12px;
+    font-family: "Jura", sans-serif;
 }
 
-.txt__agenda {
-    background-color: #001A47;
-    padding: 25px;
-    border-radius: 20px;
-    width: 16vw;
-    position: initial;
-    left: 2vw;
-    color: white;
-    font-family: "Archivo", sans-serif;
-    font-size: 0.6vw;
-    font-weight: 500;
+.agenda__nota:focus {
+    outline: 0;
+}
+
+.agenda__nota::placeholder {
+    font-family: "Jura", sans-serif;
 }
 
 .date {
@@ -127,29 +108,14 @@
     background-color: #66C5FC;
     align-self: center;
     color: #001A47;
-    position: relative;
     padding: 20px;
     border-radius: 30px;
-    width: 7vw;
+    width: 150px;
     height: auto;
 }
 
-.board__texto {
-    font-family: "Archivo", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 40px;
-    border: 2px solid #001A47; 
-    border-radius: 15px;
-    color: #001A47;
-}
-
-.board__titulo {
-    font-family: "Archivo", sans-serif;
-    font-size: 100px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #001A47;
+.date::placeholder {
+    font-family: "Jura", sans-serif;
 }
 
 @media (max-width: 1440px) {
@@ -158,7 +124,6 @@
     }
     
     .agenda__conteudo {
-        flex-direction: column-reverse;
         align-items: center;
         gap: 30px;
         padding: 40px;
@@ -170,31 +135,6 @@
         height: 50px;
         font-size: 12px;
     }
-
-    .board__msg {
-       gap: 20px;
-    }
-    
-    .board__input {
-        width: 600px;
-        height: 50px;
-        padding: 20px;
-        font-size: 20px;
-    }
-    
-    .board__button {
-        padding: 10px;
-    }
-    
-    .board__send {
-        width: 30px;
-    }
-    
-    .conteudo__board {
-        padding: 40px;
-        gap: 20px;
-        width: 800px;
-    }
     
     .conteudo__agenda {
         width: 400px;
@@ -204,26 +144,9 @@
         display: flex;
     }
     
-    
-    .txt__agenda {
-        padding: 25px;
-        width: 100%;
-        left: 2vw;
-    }
-    
     .date {
         padding: 20px;
         width: 200px;
-    }
-    
-    .board__texto {
-        font-size: 20px;
-        padding: 20px 40px;
-    }
-    
-    .board__titulo {
-        font-size: 100px;
-        margin-bottom: 20px;
     }
 }
 
@@ -239,32 +162,6 @@
         padding: 40px;
     }
     
-    .board__msg {
-       gap: 20px;
-    }
-    
-    .board__input {
-        width: 100%;
-        height: 50px;
-        padding: 20px;
-        font-size: 20px;
-    }
-    
-    .board__button {
-        padding: 10px;
-        width: auto;
-    }
-    
-    .board__send {
-        width: 30px;
-    }
-    
-    .conteudo__board {
-        padding: 40px;
-        gap: 20px;
-        width: 80%;
-    }
-    
     .conteudo__agenda {
         width: 70%;
         display: flex;
@@ -275,28 +172,9 @@
         gap: 10px;
     }
     
-    
-    .txt__agenda {
-        padding: 25px;
-        width: 100%;
-        left: 10px;
-    }
-    
     .date {
         padding: 20px;
         width: 150px;
-    }
-    
-    .board__texto {
-        font-size: 20px;
-        padding: 20px 40px;
-        width: 100%;
-    }
-    
-    .board__titulo {
-        font-size: 72px;
-        margin-bottom: 20px;
-        width: 100%;
     }
 }
 
@@ -309,33 +187,7 @@
         gap: 20px;
         padding: 30px;
     }
-    
-    .board__msg {
-       gap: 20px;
-    }
-    
-    .board__input {
-        width: 100%;
-        height: 50px;
-        padding: 20px;
-        font-size: 20px;
-    }
-    
-    .board__button {
-        padding: 10px;
-        width: auto;
-    }
-    
-    .board__send {
-        width: 30px;
-    }
-    
-    .conteudo__board {
-        padding: 40px;
-        gap: 20px;
-        width: 80%;
-    }
-    
+
     .conteudo__agenda {
         width: 70%;
         display: flex;
@@ -345,30 +197,13 @@
     .agenda__entrada {
         gap: 10px;
     }
-    
-    
-    .txt__agenda {
-        padding: 25px;
-        width: 100%;
-        left: 10px;
-    }
-    
+ 
     .date {
         padding: 20px;
         width: 70px;
         height: 30px;
     }
     
-    .board__texto {
-        font-size: 12px;
-        padding: 5px;
-        width: 100%;
-    }
-    
-    .board__titulo {
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
     .agenda__nota {
         padding: 0px;
         width: 100px;

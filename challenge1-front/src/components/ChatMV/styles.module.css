@@ -1,0 +1,253 @@
+.agenda__titulo {
+    font-family: "Archivo", sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #001A47;
+}
+
+.agenda__conteudo {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.board__msg {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+.board__input {
+    border: none;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+    width: 600px;
+    height: 50px;
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+}
+
+.board__input:focus {
+    border: none;
+    outline: 0;
+}
+
+
+
+.board__button {
+    border: none;
+    padding: 10px;
+    border-radius: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9F1FF;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+.board__button:hover {
+    scale: 1.1;
+}
+
+.board__send {
+    width: 30px;
+    align-self: center;
+    justify-self: center;
+    color: white;
+}
+
+.conteudo__board {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+
+
+.board__texto {
+    font-family: "Archivo", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 40px;
+    border: 2px solid #001A47; 
+    border-radius: 15px;
+    color: #001A47;
+}
+
+.board__titulo {
+    font-family: "Archivo", sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #001A47;
+}
+
+
+
+@media (max-width: 1440px) {
+    .agenda__titulo {
+        font-size: 72px;
+    }
+    
+    .agenda__conteudo {
+        align-items: center;
+        gap: 30px;
+        padding: 40px;
+    }
+    
+    .agenda__nota {
+        padding: 25px;
+        width: 50%;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .board__msg {
+       gap: 20px;
+    }
+    
+    .board__input {
+        width: 600px;
+        height: 50px;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .board__button {
+        padding: 10px;
+    }
+    
+    .board__send {
+        width: 30px;
+    }
+    
+    .conteudo__board {
+        padding: 40px;
+        gap: 20px;
+        width: 800px;
+    }
+    
+    .conteudo__agenda {
+        width: 400px;
+    }
+
+    
+    .board__texto {
+        font-size: 20px;
+        padding: 20px 40px;
+    }
+    
+    .board__titulo {
+        font-size: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px) {    
+    .agenda__conteudo {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+        padding: 40px;
+    }
+    
+    .board__msg {
+       gap: 20px;
+    }
+    
+    .board__input {
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .board__button {
+        padding: 10px;
+        width: auto;
+    }
+    
+    .board__send {
+        width: 30px;
+    }
+    
+    .conteudo__board {
+        padding: 40px;
+        gap: 20px;
+        width: 80%;
+    }
+
+    .board__texto {
+        font-size: 20px;
+        padding: 20px 40px;
+        width: 100%;
+    }
+    
+    .board__titulo {
+        font-size: 72px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    
+    .agenda__conteudo {
+        gap: 20px;
+        padding: 30px;
+    }
+    
+    .board__msg {
+       gap: 20px;
+    }
+    
+    .board__input {
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .board__button {
+        padding: 10px;
+        width: auto;
+    }
+    
+    .board__send {
+        width: 30px;
+    }
+    
+    .conteudo__board {
+        padding: 40px;
+        gap: 20px;
+        width: 80%;
+    }
+    
+    .conteudo__agenda {
+        width: 70%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .board__texto {
+        font-size: 12px;
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .board__titulo {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+}
+

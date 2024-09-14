@@ -11,7 +11,7 @@ export default function Header() {
                 <ul className={styles.paginas}>
                     <li><a className={styles.link} href="/">HOME</a></li>
                     {/* <li><a className={styles.link} href="/mv">MV</a></li> */}
-                    <li><a className={styles.link} href="/agenda">AGENDAR</a></li>
+                    <li><a className={styles.link} href="/agenda">MV</a></li>
                     <li><a className={styles.link} href="/about">SOBRE NÓS</a></li>
                 </ul>
             </nav>
