@@ -2,21 +2,22 @@ import { useState } from 'react';
 import styles from './styles.module.css';
 
 export default function EntryModal() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [modal, setModal] = useState(false);
 
-    const openModal = () => setIsOpen(true);
-    const closeModal = () => setIsOpen(false);
+    const toggleModal = () => {
+        setModal(!modal);
+    }
 
     return (
         <>
-            <button onClick={openModal} className={styles.openModalButton}>
+            <button onClick={toggleModal} className={styles.openModalButton}>
                 Entrar
             </button>
 
-            {isOpen && (
-                <div className={styles.overlay} onClick={closeModal}>
+            {modal && (
+                <div className={styles.overlay} onClick={toggleModal}>
                     <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-                        <button className={styles.closeButton} onClick={closeModal}>
+                        <button className={styles.closeButton} onClick={toggleModal}>
                             &times;
                         </button>
                         <main className={styles.entry__conteudo}>

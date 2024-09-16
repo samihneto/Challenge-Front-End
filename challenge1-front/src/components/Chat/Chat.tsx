@@ -4,25 +4,22 @@ import { FaComments, FaTimes } from 'react-icons/fa';
 import Send from '../../img/content/agenda/send.png'
 
 export default function Chat() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [modal, setModal] = useState(false);
 
-  const openModal = () => {
-    setIsOpen(true);
+  const toggleModal = () => {
+    setModal(!modal);
   };
 
-  const closeModal = () => {
-    setIsOpen(false);
-  };
   return (
     <div>
-      <button onClick={openModal} className={styles.open__button}>
+      <button onClick={toggleModal} className={styles.open__button}>
         <FaComments />
       </button>
 
-      {isOpen && (
+      {modal && (
         <div className={styles.modal__overlay}>
           <div className={styles.modal__content}>
-            <button onClick={closeModal} className={styles.close__button}>
+            <button onClick={toggleModal} className={styles.close__button}>
               <FaTimes />
             </button>
             <h2 className={styles.chat__titulo}>Chat</h2>

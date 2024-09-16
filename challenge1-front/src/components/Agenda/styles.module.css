@@ -168,6 +168,10 @@
         align-items: center;
     }
     
+    .modal__content {
+        width: 80%;
+    }
+
     .agenda__entrada {
         gap: 10px;
     }
@@ -182,14 +186,23 @@
     .agenda__titulo {
         font-size: 40px;
     }
+
+    .agenda__nota {
+        width: 500px;
+        height: 50px;
+    }
     
     .agenda__conteudo {
         gap: 20px;
         padding: 30px;
     }
 
+    .modal__content {
+        width: 80%;
+    }
+
     .conteudo__agenda {
-        width: 70%;
+        width: 90%;
         display: flex;
         align-items: center;
     }

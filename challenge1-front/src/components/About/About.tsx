@@ -11,9 +11,9 @@ import 'slick-carousel/slick/slick-theme.css'
 
 export default function About() {
     const membros: IPropsCardAbout[] = [
-      { image: andre, name: "André Geraldi Marcolongo", rm: "rm555285", urlGithub: "https://www.google.com/", urlInstagram: "", urlLinkedin: "" },
-      { image: levy, name: "Felipe Levy Stephens Fidelix", rm: "rm556426", urlGithub: "https://www.youtube.com/", urlInstagram: "", urlLinkedin: "" },
-      { image: samir, name: "Samir Hage Neto", rm: "rm557260", urlGithub: "", urlInstagram: "", urlLinkedin: "" },
+      { image: andre, name: "André Geraldi Marcolongo", rm: "rm555285", urlGithub: "https://github.com/andremarko", urlInstagram: "", urlLinkedin: "https://www.linkedin.com/in/andrem7/" },
+      { image: levy, name: "Felipe Levy Stephens Fidelix", rm: "rm556426", urlGithub: "https://github.com/felipe-2833", urlInstagram: "", urlLinkedin: "https://www.linkedin.com/in/felipe-fidelix-316980264/" },
+      { image: samir, name: "Samir Hage Neto", rm: "rm557260", urlGithub: "https://github.com/samihneto", urlInstagram: "", urlLinkedin: "https://www.linkedin.com/in/samir-neto/" },
     ]
   
     const settings = {
