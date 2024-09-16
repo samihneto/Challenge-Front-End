@@ -1,10 +1,11 @@
 import styles from './styles.module.css'
+import mecanico from '../../img/content/news/mecanico.webp'
 
 export default function News() {
     return (
         <section className={styles.conteudo}>
             <div className={styles.imagem}>
-                <img className={styles.img} src="https://futuretransport.com.br/wp-content/uploads/2018/06/renault-porto-seguro-678x381.jpg" alt="" />
+                <img className={styles.img} src={mecanico} alt="" />
             </div>
             <div className={styles.texto}>
                 <h1 className={styles.conteudo__titulo}>O Projeto</h1>
