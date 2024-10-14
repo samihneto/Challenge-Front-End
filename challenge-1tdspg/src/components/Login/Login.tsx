@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import styles from './styles.module.css';
 
 export default function Login() {
     const [isModalOpen, setIsModalOpen] = useState(true);
@@ -11,28 +10,25 @@ export default function Login() {
     return (
         <>
             {isModalOpen && (
-                <div className={styles.overlay} onClick={closeModal}>
-                    <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-                        <section className={styles.caixa__entrada}>
+                <div onClick={closeModal}>
+                    <div onClick={(e) => e.stopPropagation()}>
+                        <section>
                             <form
                                 name="login__form"
-                                id={styles.login__form}
                                 action=""
                                 method="post"
                             >
-                                <div className={styles.inputs}>
+                                <div>
                                     <input
                                         type="text"
                                         name="login__usuario"
-                                        id={styles.login__usuario}
                                         required
                                         placeholder="Digite seu usuário"
                                     />
-                                    <div className={styles.inputs__senha}>
+                                    <div>
                                         <input
                                             type="password"
                                             name="login__senha"
-                                            id={styles.login__senha}
                                             required
                                             placeholder="Digite sua senha"
                                         />
@@ -41,23 +37,21 @@ export default function Login() {
                                                 <input
                                                     type="checkbox"
                                                     name="login__check"
-                                                    id={styles.login__check}
                                                 />
                                                 <label
                                                     htmlFor="login__check"
-                                                    className={styles.label__check}
                                                 >
                                                     Lembrar de mim
                                                 </label>
                                             </div>
-                                            <a href="/recovery" className={styles.esqueceu}>
+                                            <a href="/recovery">
                                                 Esqueceu a senha?
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <button className={styles.enviar} type="submit">
+                                <button type="submit">
                                     LOGIN
                                 </button>
                             </form>

@@ -1,5 +1,4 @@
 import { IPropsCardAbout } from '../../interface/About.interface'
-import styles from './styles.module.css'
 import samir from '../../img/content/about/samir.jpg'
 import levy from '../../img/content/about/levy.jpg'
 import andre from '../../img/content/about/andre.jpg'
@@ -43,9 +42,9 @@ export default function About() {
     };
   
     return (
-      <main className={styles.about}>
-        <h1 className={styles.about__titulo}>Sobre nós</h1>
-        <p className={styles.about__texto}>
+      <main>
+        <h1>Sobre nós</h1>
+        <p>
           Nós somos uma equipe criada na Instituição FIAP Paulista, composta por alunos dedicados ao estudo e ao progresso de novas tecnologias.
           <br />
           O nosso foco como equipe é trazer soluções rápidas e de boa acessibilidade para nossos clientes, sempre buscando por conhecer novos caminhos

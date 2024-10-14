@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import styles from './styles.module.css';
 
 export default function EntryModal() {
     const [modal, setModal] = useState(false);
@@ -10,23 +9,23 @@ export default function EntryModal() {
 
     return (
         <>
-            <button onClick={toggleModal} className={styles.openModalButton}>
+            <button onClick={toggleModal}>
                 Entrar
             </button>
 
             {modal && (
-                <div className={styles.overlay} onClick={toggleModal}>
-                    <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-                        <button className={styles.closeButton} onClick={toggleModal}>
+                <div onClick={toggleModal}>
+                    <div onClick={(e) => e.stopPropagation()}>
+                        <button onClick={toggleModal}>
                             &times;
                         </button>
-                        <main className={styles.entry__conteudo}>
+                        <main>
                             <a href="/login">
-                                <button className={styles.botao__login}>LOGIN</button>
+                                <button>LOGIN</button>
                             </a>
-                            <h1 className={styles.ouTexto}>-ou-</h1>
+                            <h1>-ou-</h1>
                             <a href="/register">
-                                <button className={styles.botao__cadastro}>CADASTRO</button>
+                                <button>CADASTRO</button>
                             </a>
                         </main>
                     </div>
