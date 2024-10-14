@@ -1,13 +1,10 @@
 import ferramentaImg from "../img/content/mv/tools.png";
 import cameraIcon from "../img/content/mv/camera.png";
 import fileIcon from "../img/content/mv/file.png";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
 export default function Mecv() {
     return (
         <div>
-            <Header />
             <main className="mv">
                 <div className="parte_superior">
                     <img className="mv__ferramenta" src={ferramentaImg} alt="Ilustração de uma ferramenta" />
@@ -31,7 +28,6 @@ export default function Mecv() {
                     </div>
                 </section>
             </main>
-            <Footer />
         </div>
     )
 }

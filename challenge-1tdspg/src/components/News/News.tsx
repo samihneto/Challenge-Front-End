@@ -1,15 +1,22 @@
-import mecanico from '../../img/content/news/mecanico.webp'
+import Image from 'next/image'; // Importa o componente Image do Next.js
+import mecanico from '../../img/content/news/mecanico.webp';
 
 export default function News() {
     return (
-        <section>
-            <div>
-                <img src={mecanico} alt="" />
+        <section className="flex flex-col lg:flex-row items-start justify-center bg-white p-16 shadow-lg rounded-lg gap-10 w-11/12 lg:w-3/4 mx-auto">
+            <div className="flex-shrink-0">
+                <Image 
+                    className="rounded-lg" 
+                    src={mecanico} 
+                    alt="Imagem de mecânico" 
+                    width={600} 
+                    height={400} 
+                />
             </div>
-            <div>
-                <h1>O Projeto</h1>
-                <hr />
-                <p>
+            <div className="flex flex-col justify-start w-full max-w-md">
+                <h1 className="text-[#001A47] font-bold text-5xl mb-2">O Projeto</h1>
+                <hr className="mb-4" />
+                <p className="text-[#001A47] font-medium text-lg mb-4">
                     O Projeto Mecânico Virtual é uma iniciativa criada com o intuito de facilitar o acesso de clientes da Porto Seguro
                     à serviços de mecânica. O intuito do nosso Bot é criar uma fácil identificação do problema e o grau de seriedade para
                     assim poder dar uma resposta rápida e segura ao nosso cliente.
@@ -18,12 +25,11 @@ export default function News() {
                     consulta o mais rápido possível!
                 </p>
                 <a href="/agenda">
-                <button>
-                    Comece uma consulta
-                </button>
-            </a>
-
+                    <button className="bg-[#001A47] text-white font-jura text-base rounded-lg w-48 h-12 hover:scale-110 transition-transform duration-300">
+                        Comece uma consulta
+                    </button>
+                </a>
             </div>
         </section>
-    )
+    );
 }

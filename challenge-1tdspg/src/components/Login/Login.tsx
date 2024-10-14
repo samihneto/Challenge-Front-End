@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image'; // Importa o componente Image do Next.js
 
 export default function Login() {
     const [isModalOpen, setIsModalOpen] = useState(true);
@@ -10,48 +11,56 @@ export default function Login() {
     return (
         <>
             {isModalOpen && (
-                <div onClick={closeModal}>
-                    <div onClick={(e) => e.stopPropagation()}>
-                        <section>
-                            <form
-                                name="login__form"
-                                action=""
-                                method="post"
-                            >
-                                <div>
+                <div 
+                    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center z-50" 
+                    onClick={closeModal}
+                >
+                    <div 
+                        className="bg-white p-8 rounded-lg shadow-lg w-96" 
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <section className="flex flex-col items-center justify-center gap-10">
+                            <form name="login__form" id="login__form" action="" method="post">
+                                <div className="grid gap-5">
                                     <input
                                         type="text"
                                         name="login__usuario"
+                                        id="login__usuario"
                                         required
                                         placeholder="Digite seu usuário"
+                                        className="border-none rounded-full p-4 w-full h-12 shadow-md focus:outline-none"
                                     />
-                                    <div>
+                                    <div className="flex flex-col gap-2">
                                         <input
                                             type="password"
                                             name="login__senha"
+                                            id="login__senha"
                                             required
                                             placeholder="Digite sua senha"
+                                            className="border-none rounded-full p-4 w-full h-12 shadow-md focus:outline-none"
                                         />
-                                        <div className="senha__inf">
-                                            <div className="lembrar">
+                                        <div className="flex flex-col items-center gap-4">
+                                            <div className="flex items-center">
                                                 <input
                                                     type="checkbox"
                                                     name="login__check"
+                                                    id="login__check"
+                                                    className="mr-2"
                                                 />
-                                                <label
-                                                    htmlFor="login__check"
-                                                >
+                                                <label htmlFor="login__check" className="text-sm font-sans">
                                                     Lembrar de mim
                                                 </label>
                                             </div>
-                                            <a href="/recovery">
+                                            <a href="/recovery" className="text-sm text-blue-500">
                                                 Esqueceu a senha?
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-
-                                <button type="submit">
+                                <button 
+                                    className="font-sans text-lg bg-[#001A47] text-white rounded-lg w-full h-12 hover:scale-105 transition-transform"
+                                    type="submit"
+                                >
                                     LOGIN
                                 </button>
                             </form>
