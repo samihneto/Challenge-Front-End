@@ -1,8 +1,10 @@
+import { StaticImageData } from 'next/image';
+
 export interface IPropsCardAbout {
-    image: string,
-    name: string,
-    rm: string,
-    urlInstagram: string,
-    urlLinkedin: string,
-    urlGithub: string,
+  image: StaticImageData; // Manter StaticImageData para imagens importadas
+  name: string;
+  rm: string;
+  urlGithub: string;
+  urlInstagram: string;
+  urlLinkedin: string;
 }

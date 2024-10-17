@@ -1,10 +1,16 @@
+"use client"; // Adiciona esta linha para marcar o componente como Client-side
+
+import dynamic from 'next/dynamic';
 import Image, { StaticImageData } from 'next/image';
-import samir from '../../public/samir.jpg';
-import levy from '../../public/levy.jpg';
-import andre from '../../public/andre.jpg';
-import Slider from 'react-slick';
+import samir from '../../imgs/content/about/samir.jpg';
+import levy from '../../imgs/content/about/levy.jpg';
+import andre from '../../imgs/content/about/andre.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import CardAbout from '../CardAbout/CardAbout';
+
+// Carregar o Slider dinamicamente para evitar erros no SSR
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 interface IPropsCardAbout {
   image: StaticImageData;
@@ -22,7 +28,7 @@ export default function About() {
       name: 'André Geraldi Marcolongo',
       rm: 'rm555285',
       urlGithub: 'https://github.com/andremarko',
-      urlInstagram: '',
+      urlInstagram: '.',
       urlLinkedin: 'https://www.linkedin.com/in/andrem7/',
     },
     {
@@ -30,7 +36,7 @@ export default function About() {
       name: 'Felipe Levy Stephens Fidelix',
       rm: 'rm556426',
       urlGithub: 'https://github.com/felipe-2833',
-      urlInstagram: '',
+      urlInstagram: '.',
       urlLinkedin: 'https://www.linkedin.com/in/felipe-fidelix-316980264/',
     },
     {
@@ -38,7 +44,7 @@ export default function About() {
       name: 'Samir Hage Neto',
       rm: 'rm557260',
       urlGithub: 'https://github.com/samihneto',
-      urlInstagram: '',
+      urlInstagram: '.',
       urlLinkedin: 'https://www.linkedin.com/in/samir-neto/',
     },
   ];
@@ -70,7 +76,7 @@ export default function About() {
   };
 
   return (
-    <main className="w-full max-w-screen-lg mx-auto mb-12 px-4 sm:px-6 lg:px-8">
+    <main className="w-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 mt-14 mb-24">
       <h1 className="text-white text-center font-extrabold text-5xl mt-5 sm:text-4xl md:text-6xl lg:text-7xl">
         Sobre nós
       </h1>
@@ -84,41 +90,20 @@ export default function About() {
       </p>
       <div className="w-full overflow-hidden">
         <Slider {...settings}>
-          {membros.map((membro, index) => (
-            <div key={index} className="flex justify-center">
-              <div className="text-center">
-                <Image
-                  src={membro.image}
-                  alt={membro.name}
-                  width={200}
-                  height={200}
-                  className="rounded-full mx-auto"
-                />
-                <h2 className="text-white mt-4 font-semibold text-xl md:text-2xl lg:text-3xl">
-                  {membro.name}
-                </h2>
-                <p className="text-white text-sm md:text-base">{membro.rm}</p>
-                <div className="mt-2 space-x-4">
-                  {membro.urlGithub && (
-                    <a
-                      href={membro.urlGithub}
-                      className="text-blue-500 hover:text-blue-300"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                  {membro.urlLinkedin && (
-                    <a
-                      href={membro.urlLinkedin}
-                      className="text-blue-500 hover:text-blue-300"
-                    >
-                      LinkedIn
-                    </a>
-                  )}
+        {membros.map((membro: IPropsCardAbout, index: number) => {
+              return (
+                <div key={index}>
+                  <CardAbout
+                    image={membro.image}
+                    name={membro.name}
+                    rm={membro.rm}
+                    urlInstagram={membro.urlInstagram}
+                    urlLinkedin={membro.urlLinkedin}
+                    urlGithub={membro.urlGithub}
+                  />
                 </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
         </Slider>
       </div>
     </main>

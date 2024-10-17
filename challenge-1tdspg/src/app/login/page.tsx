@@ -3,11 +3,9 @@ import News from "../../components/News/News";
 
 export default function login() {
     return (
-        <div>
-            <main>
+        <div className="flex justify-center bg-[#00102c]">
                 <Login />
                 <News />
-            </main>
         </div>
     );
 }

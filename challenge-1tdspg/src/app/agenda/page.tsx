@@ -2,10 +2,8 @@ import ChatMV from "../../components/ChatMV/ChatMV";
 
 export default function agenda() {
     return (
-        <div>
-            <main>
-                <ChatMV />
-            </main>
+        <div className="flex justify-center bg-[#00102c]">
+            <ChatMV />
         </div>
     );
 }

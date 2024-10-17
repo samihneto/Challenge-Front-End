@@ -12,8 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        archivo: ["Archivo", "sans-serif"],
+        teko: ["Teko", "sans-serif"],
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

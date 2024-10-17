@@ -4,7 +4,7 @@ import fileIcon from "../img/content/mv/file.png";
 
 export default function Mecv() {
     return (
-        <div>
+        <div className="flex justify-center bg-[#00102c] h-full">
             <main className="mv">
                 <div className="parte_superior">
                     <img className="mv__ferramenta" src={ferramentaImg} alt="Ilustração de uma ferramenta" />

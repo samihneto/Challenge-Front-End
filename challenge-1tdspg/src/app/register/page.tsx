@@ -3,11 +3,9 @@ import Register from "../../components/Register/Register";
 
 export default function register() {
     return (
-        <div>
-            <main>
+        <div className="flex justify-center bg-[#00102c]">
                 <Register />
                 <News />
-            </main>
         </div>
     );
 }

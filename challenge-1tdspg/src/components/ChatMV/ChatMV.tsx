@@ -4,7 +4,7 @@ import Agenda from '../Agenda/Agenda';
 
 export default function ChatMV() {
     return (
-        <section className="flex flex-col items-center gap-8 p-10 lg:flex-row lg:gap-12">
+        <section className="flex flex-col justify-center items-center gap-8 p-10 lg:flex-row lg:gap-12">
             <div className="flex flex-col items-center justify-center gap-6 bg-white p-10 shadow-lg rounded-2xl w-full lg:w-2/3">
                 <h1 className="text-4xl lg:text-6xl font-bold text-blue-900">Mecânico Virtual</h1>
                 <p className="text-base lg:text-lg font-light text-blue-900 p-5 border-2 border-blue-900 rounded-lg">

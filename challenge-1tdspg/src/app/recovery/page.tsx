@@ -3,7 +3,7 @@ import Recovery from "../../components/Recovery/Recovery";
 
 export default function recovery() {
     return (
-        <div>
+        <div className="flex justify-center bg-[#00102c]"> 
             <main>
                 <Recovery />
                 <News />
