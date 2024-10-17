@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 
@@ -45,16 +47,10 @@ export default function Agenda() {
                   />
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-4 justify-center">
-                  <input
-                    type="text"
-                    placeholder="Escreva sua nota"
-                    className="w-full md:w-1/2 px-4 py-2 border-2 border-blue-500 rounded-lg text-base shadow-sm focus:outline-none focus:border-blue-700"
-                  />
-                  <input
-                    type="date"
-                    className="w-full md:w-1/2 px-4 py-2 bg-blue-200 border-none rounded-lg text-base text-blue-900 shadow-sm focus:outline-none focus:bg-blue-300"
-                  />
+                <div className="flex justify-center">
+                  <button className="bg-blue-900 text-white px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform">
+                    Confirmar Agendamento
+                  </button>
                 </div>
               </div>
             </section>

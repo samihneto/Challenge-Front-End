@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from 'react';
-import Image from 'next/image'; // Importa o componente Image do Next.js
+import Link from 'next/link'; // Importa Link do Next.js para navegações internas
 
 export default function Login() {
     const [isModalOpen, setIsModalOpen] = useState(true);
@@ -17,7 +19,7 @@ export default function Login() {
                 >
                     <div 
                         className="bg-white p-8 rounded-lg shadow-lg w-96" 
-                        onClick={(e) => e.stopPropagation()}
+                        onClick={(e) => e.stopPropagation()} // Impede o fechamento ao clicar dentro do modal
                     >
                         <section className="flex flex-col items-center justify-center gap-10">
                             <form name="login__form" id="login__form" action="" method="post">
@@ -28,7 +30,7 @@ export default function Login() {
                                         id="login__usuario"
                                         required
                                         placeholder="Digite seu usuário"
-                                        className="border-none rounded-full p-4 w-full h-12 shadow-md focus:outline-none"
+                                        className="border-none rounded-full p-4 w-full h-12 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                                     />
                                     <div className="flex flex-col gap-2">
                                         <input
@@ -37,7 +39,7 @@ export default function Login() {
                                             id="login__senha"
                                             required
                                             placeholder="Digite sua senha"
-                                            className="border-none rounded-full p-4 w-full h-12 shadow-md focus:outline-none"
+                                            className="border-none rounded-full p-4 w-full h-12 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                                         />
                                         <div className="flex flex-col items-center gap-4">
                                             <div className="flex items-center">
@@ -51,9 +53,10 @@ export default function Login() {
                                                     Lembrar de mim
                                                 </label>
                                             </div>
-                                            <a href="/recovery" className="text-sm text-blue-500">
+                                            {/* Link para recuperação de senha usando Link do Next.js */}
+                                            <Link href="/recovery" className="text-sm text-blue-500 hover:underline">
                                                 Esqueceu a senha?
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

@@ -1,4 +1,7 @@
+"use client";
+
 import { useState } from 'react';
+import Link from 'next/link'; // Importe o componente Link do Next.js
 
 export default function EntryModal() {
     const [modal, setModal] = useState(false);
@@ -32,17 +35,18 @@ export default function EntryModal() {
                             &times;
                         </button>
                         <main className="flex flex-col items-center justify-center">
-                            <a href="/login">
+                            {/* Substituindo as tags <a> por <Link> do Next.js */}
+                            <Link href="/login">
                                 <button className="w-40 h-12 bg-blue-900 text-white rounded-md font-semibold shadow-md hover:scale-105 transition-transform">
                                     LOGIN
                                 </button>
-                            </a>
+                            </Link>
                             <h1 className="my-4 text-lg font-sans">-ou-</h1>
-                            <a href="/register">
+                            <Link href="/register">
                                 <button className="w-40 h-12 bg-blue-100 text-blue-900 rounded-md font-semibold shadow-md hover:scale-105 transition-transform">
                                     CADASTRO
                                 </button>
-                            </a>
+                            </Link>
                         </main>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import Image from 'next/image'; // Importa o componente Image do Next.js
-import logoMV2 from "../../img/header/logo_mv2.png";
+import logoMV2 from "../../imgs/header/logo_mv2.png";
 import Chat from '../Chat/Chat';
 import Entry from '../Entry/Entry';
 

@@ -1,9 +1,9 @@
 import Image from 'next/image'; // Importa o componente Image do Next.js
-import mecanico from '../../img/content/news/mecanico.webp';
+import mecanico from '../../imgs/content/news/mecanico.webp';
 
 export default function News() {
     return (
-        <section className="flex flex-col lg:flex-row items-start justify-center bg-white p-16 shadow-lg rounded-lg gap-10 w-11/12 lg:w-3/4 mx-auto">
+        <section className="flex flex-col lg:flex-row items-start justify-center bg-white p-16 shadow-lg rounded-lg gap-10 w-11/12 lg:w-4/4 mx-auto my-16">
             <div className="flex-shrink-0">
                 <Image 
                     className="rounded-lg" 
@@ -13,7 +13,7 @@ export default function News() {
                     height={400} 
                 />
             </div>
-            <div className="flex flex-col justify-start w-full max-w-md">
+            <div className="flex flex-col justify-start w-full max-w-lg">
                 <h1 className="text-[#001A47] font-bold text-5xl mb-2">O Projeto</h1>
                 <hr className="mb-4" />
                 <p className="text-[#001A47] font-medium text-lg mb-4">

@@ -1,4 +1,4 @@
-import Send from '../../img/content/agenda/send.png';
+import Send from '../../imgs/content/agenda/send.png';
 import Image from 'next/image';
 import Agenda from '../Agenda/Agenda';
 

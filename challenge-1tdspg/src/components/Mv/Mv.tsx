@@ -1,7 +1,7 @@
-import Image from 'next/image'; // Importa o componente Image do Next.js
-import ferramentaImg from "../img/content/mv/tools.png";
-import cameraIcon from "../img/content/mv/camera.png";
-import fileIcon from "../img/content/mv/file.png";
+import Image from 'next/image';
+import ferramentaImg from "../imgs/content/mv/tools.png";
+import cameraIcon from "../imgs/content/mv/camera.png";
+import fileIcon from "../imgs/content/mv/file.png";
 
 export default function Mv() {
     return (

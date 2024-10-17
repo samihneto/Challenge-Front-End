@@ -1,5 +1,8 @@
+"use client";
+
 import { useState } from 'react';
 import { FaComments, FaTimes } from 'react-icons/fa';
+import Image from 'next/image'; // Importe o componente Image do Next.js
 
 export default function Chat() {
   const [modal, setModal] = useState(false);
@@ -36,7 +39,8 @@ export default function Chat() {
                 className="w-full border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
               <button className="bg-blue-900 text-white p-2 rounded-full">
-                <img src="/send.png" alt="Enviar" className="w-5 h-5" />
+                {/* Substitua a tag img pelo componente Image do Next.js */}
+                <Image src="/send.png" alt="Enviar" width={20} height={20} />
               </button>
             </div>
           </div>
