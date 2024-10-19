@@ -41,7 +41,7 @@ export default function Login() {
                                             placeholder="Digite sua senha"
                                             className="border-none rounded-full p-4 w-full h-12 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                                         />
-                                        <div className="flex flex-col items-center gap-4">
+                                        <div className="flex flex-row items-center gap-4">
                                             <div className="flex items-center">
                                                 <input
                                                     type="checkbox"
@@ -61,7 +61,7 @@ export default function Login() {
                                     </div>
                                 </div>
                                 <button 
-                                    className="font-sans text-lg bg-[#001A47] text-white rounded-lg w-full h-12 hover:scale-105 transition-transform"
+                                    className="font-sans text-lg bg-[#001A47] text-white rounded-lg w-full h-12 hover:scale-105 transition-transform "
                                     type="submit"
                                 >
                                     LOGIN
