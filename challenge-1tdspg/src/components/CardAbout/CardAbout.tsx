@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link'; // Importa o componente Link do Next.js
-import { IPropsCardAbout } from '../../interface/About.interface';
+import { IPropsCardAbout } from '@/interface/About.interface';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 export default function CardAbout(props: IPropsCardAbout) {

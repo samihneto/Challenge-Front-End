@@ -1,13 +1,14 @@
-import ferramentaImg from "../img/content/mv/tools.png";
-import cameraIcon from "../img/content/mv/camera.png";
-import fileIcon from "../img/content/mv/file.png";
+import ferramentaImg from "@/public/img/content/mv/tools.png";
+import cameraIcon from "@/public/img/content/mv/camera.png";
+import fileIcon from "@/public/img/content/mv/file.png";
+import Image from "next/image";
 
 export default function Mecv() {
     return (
         <div className="flex justify-center bg-[#00102c] h-full">
             <main className="mv">
                 <div className="parte_superior">
-                    <img className="mv__ferramenta" src={ferramentaImg} alt="Ilustração de uma ferramenta" />
+                    <Image src={ferramentaImg} alt={"Ilustração de uma ferramenta"} />
                     <h1 className="mv__titulo">Mecânico Virtual</h1>
                 </div>
                 <section className="bot_box">
@@ -20,10 +21,10 @@ export default function Mecv() {
                     <div className="bot__chat">
                         <input type="text" className="bot__input" placeholder="Digite sua mensagem..." />
                         <a className="bot__btn">
-                            <img src={cameraIcon} alt="Ícone câmera" />
+                            <Image src={cameraIcon} alt={"Ilustração de uma ferramenta"} />
                         </a>
                         <a className="bot__btn">
-                            <img src={fileIcon} alt="Ícone arquivo" />
+                            <Image src={fileIcon} alt={"Ilustração de uma ferramenta"} />
                         </a>
                     </div>
                 </section>
