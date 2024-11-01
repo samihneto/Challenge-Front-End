@@ -17,40 +17,40 @@ export default function Chamados() {
     }, [])
     
   return (
-    <div className="flex flex-col justify-center items-center p-4 gap-y-6">
-        <h1 className="text-white text-5xl font-black">Tabela de Chamados</h1>
-        <table className="bg-blue-100 border-2 border-[#00102c] rounded-xl">
-            <thead className="border-2 border-[#00102c]">
-                <tr className="border-2 border-[#00102c]">
-                    <th className="text-[#00102c] border-2 border-[#00102c] p-2 font-semibold font-teko">ID CLIENTE</th>
-                    <th className="text-[#00102c] border-2 border-[#00102c] p-2 font-semibold font-teko">DATA ABERTURA</th>
-                    <th className="text-[#00102c] border-2 border-[#00102c] p-2 font-semibold font-teko">ID CHAMADO</th>
-                    <th className="text-[#00102c] border-2 border-[#00102c] p-2 font-semibold font-teko">ID OFICINA</th>
-                    <th className="text-[#00102c] border-2 border-[#00102c] p-2 font-semibold font-teko">STATUS</th>
-                    <th className="text-[#00102c] border-2 border-[#00102c] p-2 font-semibold font-teko">ID VEÍCULO</th>
-                    <th className="text-[#00102c] border-2 border-[#00102c] p-2 font-semibold font-teko">Editar | Excluir</th>
+<div className="flex flex-col justify-center items-center p-4 gap-y-6">
+    <h1 className="text-white text-5xl font-black">Tabela de Chamados</h1>
+    <table className="rounded-xl">
+        <thead className="border-b-2">
+            <tr>
+                <th className="text-white p-2 font-semibold font-archivo">ID CLIENTE</th>
+                <th className="text-white p-2 font-semibold font-archivo">DATA ABERTURA</th>
+                <th className="text-white p-2 font-semibold font-archivo">ID CHAMADO</th>
+                <th className="text-white p-2 font-semibold font-archivo">ID VEÍCULO</th>
+                <th className="text-white p-2 font-semibold font-archivo">ID OFICINA</th>
+                <th className="text-white p-2 font-semibold font-archivo">STATUS</th>
+                <th className="text-white p-2 font-semibold font-archivo">Editar | Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            {chamados.map(c => (
+                <tr key={c.clienteUserId} className=""> {/* Adiciona a borda inferior */}
+                    <td className="text-white p-2">{c.dataAbertura}</td>
+                    <td className="text-white p-2">{c.idChamdo}</td>
+                    <td className="text-white p-2">{c.oficinaUserId}</td>
+                    <td className="text-white p-2">{c.status}</td>
+                    <td className="text-white p-2">{c.veiculoIdVeiculo}</td>
+                    <td className="text-white p-2">Editar|Excluir</td>
                 </tr>
-            </thead>
-            <tbody>
-                {chamados.map( c=>(
-                    <tr key={c.clienteUserId}>
-                        <td>{c.dataAbertura}</td>
-                        <td>{c.idChamdo}</td>
-                        <td>{c.oficinaUserId}</td>
-                        <td>{c.status}</td>
-                        <td>{c.veiculoIdVeiculo}</td>
-                        <td>Editar|Excluir</td>
-                    </tr>                    
-                ))}
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colSpan={6}>
-                        Quantidade de Chamados: {chamados.length}
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
+            ))}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colSpan={7} className="flex text-white">
+                    Quantidade de Chamados: {chamados.length}
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
   )
 }

@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    crossOrigin: 'anonymous',
+    async rewrites() {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'http://localhost:8080/mecanico/:path*', // Proxy para a API
+        },
+      ];
+    },
   };
   
   export default nextConfig;
-
 
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
