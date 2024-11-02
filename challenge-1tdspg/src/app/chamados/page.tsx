@@ -117,29 +117,29 @@ export default function Chamados() {
                         <th className="text-white p-2 font-semibold font-archivo">ID OFICINA</th>
                         <th className="text-white p-2 font-semibold font-archivo">STATUS</th>
                         <th className="text-white p-2 font-semibold font-archivo">Editar | Excluir</th>
+                        <th className="text-white p-2 font-semibold font-archivo">Link</th>
                     </tr>
                 </thead>
                 <tbody>
                     {chamados.map(c => (
                         <tr key={c.clienteUserId}>
-                            <Link href={`/chamados/${c.clienteUserId}`}>
-                                <td className="text-white font-archivo font-medium text-xl p-2">{c.clienteUserId}</td>
-                            </Link>
+                            <td className="text-white font-archivo font-medium text-xl p-2">{c.clienteUserId}</td>    
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.dataAbertura}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.idChamdo}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.veiculoIdVeiculo}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.oficinaUserId}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.status}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">
-                                <button onClick={() => handleEditChamado(c)} className="bg-yellow-500 text-black p-1">Editar</button>
-                                <button onClick={() => handleDeleteChamado(c.idChamdo)} className="bg-red-500 text-white p-1 ml-2">Excluir</button>
+                                <button onClick={() => handleEditChamado(c)} className="bg-blue-500 font-archivo font-medium text-xl p2 text-black p-1 hover:scale-105">Editar</button>
+                                <button onClick={() => handleDeleteChamado(c.idChamdo)} className="bg-red-500 font-archivo font-medium text-xl p2 text-white p-1 ml-2 hover:scale-105">Excluir</button>
                             </td>
+                            <td><Link className="underline text-white font-archivo font-medium text-xl p2" href={`/chamados/${c.idChamdo}`}>Ver Chamado</Link></td>
                         </tr>
                     ))}
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colSpan={7} className="flex text-white pt-5">
+                        <td colSpan={8} className="flex text-white pt-5">
                             Quantidade de Chamados: {chamados.length}
                         </td>
                     </tr>
@@ -158,7 +158,7 @@ export default function Chamados() {
                                 onChange={handleChange}
                                 value={newChamado.clienteUserId}
                                 required
-                                className="p-2"
+                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
                             />
                             <input
                                 type="text"
@@ -167,7 +167,7 @@ export default function Chamados() {
                                 onChange={handleChange}
                                 value={newChamado.dataAbertura}
                                 required
-                                className="p-2"
+                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
                             />
                             <input
                                 type="text"
@@ -176,7 +176,7 @@ export default function Chamados() {
                                 onChange={handleChange}
                                 value={newChamado.idChamdo}
                                 required
-                                className="p-2"
+                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
                             />
                             <input
                                 type="text"
@@ -185,7 +185,7 @@ export default function Chamados() {
                                 onChange={handleChange}
                                 value={newChamado.veiculoIdVeiculo}
                                 required
-                                className="p-2"
+                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
                             />
                             <input
                                 type="text"
@@ -194,7 +194,7 @@ export default function Chamados() {
                                 onChange={handleChange}
                                 value={newChamado.oficinaUserId}
                                 required
-                                className="p-2"
+                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
                             />
                             <input
                                 type="text"
@@ -203,7 +203,7 @@ export default function Chamados() {
                                 onChange={handleChange}
                                 value={newChamado.status}
                                 required
-                                className="p-2 border-"
+                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
                             />
                             <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg hover:scale-105">
                                 {isEditing ? "Atualizar Chamado" : "Adicionar Chamado"}
