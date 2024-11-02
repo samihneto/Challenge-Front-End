@@ -1,8 +1,8 @@
 export type TipoChamado = {
-    clienteUserId: number;
+    clienteUserId: any;
     dataAbertura: string;
-    idChamdo: number;
-    oficinaUserId: number;
+    idChamdo: any;
+    oficinaUserId: any;
     status: string;
-    veiculoIdVeiculo: number;
+    veiculoIdVeiculo: any;
 }
