@@ -10,6 +10,31 @@ export default function Agenda() {
     setModal(!modal);
   };
 
+  const [agendar, setAgendar] = useState({
+    id: 0,
+    nota: "",
+    dataAgendamento: "",
+  });
+
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const { name, value } = e.target;
+    setAgendar({...agendar, [name]: value})
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    const response = await fetch("http://localhost:3000/dados/dados-api", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(agendar),
+    });
+    const result = await response.json();
+    
+  }
+
   return (
     <>
       <button
@@ -34,16 +59,22 @@ export default function Agenda() {
                 Agendar
               </h1>
 
-              <div className="space-y-4 w-full">
+              <form className="space-y-4 w-full" onSubmit={handleSubmit}>
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <input
                     type="text"
                     placeholder="Escreva sua nota"
                     className="w-full md:w-1/2 px-4 py-2 border-2 border-blue-500 rounded-lg text-base shadow-sm focus:outline-none focus:border-blue-700"
+                    onChange={handleChange}
+                    value={agendar.nota}
+                    name="nota"
                   />
                   <input
                     type="date"
                     className="w-full md:w-1/2 px-4 py-2 bg-blue-200 border-none rounded-lg text-base text-blue-900 shadow-sm focus:outline-none focus:bg-blue-300"
+                    onChange={handleChange}
+                    value={agendar.dataAgendamento}
+                    name="dataAgendamento"
                   />
                 </div>
 
@@ -52,7 +83,7 @@ export default function Agenda() {
                     Confirmar Agendamento
                   </button>
                 </div>
-              </div>
+              </form>
             </section>
           </div>
         </div>

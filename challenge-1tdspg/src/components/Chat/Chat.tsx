@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaComments, FaTimes } from 'react-icons/fa';
 import Image from 'next/image'; // Importe o componente Image do Next.js
+import Send from '@/public/imgs/content/agenda/send.png'
 
 export default function Chat() {
   const [modal, setModal] = useState(false);
@@ -40,7 +41,7 @@ export default function Chat() {
               />
               <button className="bg-blue-900 text-white p-2 rounded-full">
                 {/* Substitua a tag img pelo componente Image do Next.js */}
-                <Image src="/send.png" alt="Enviar" width={20} height={20} />
+                <Image src={Send} alt="Enviar" width={20} height={20} />
               </button>
             </div>
           </div>

@@ -203,7 +203,7 @@ export default function Chamados() {
                                 onChange={handleChange}
                                 value={newChamado.status}
                                 required
-                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
+                                className="p-2 border-"
                             />
                             <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg hover:scale-105">
                                 {isEditing ? "Atualizar Chamado" : "Adicionar Chamado"}
