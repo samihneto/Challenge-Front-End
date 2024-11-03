@@ -1,10 +1,10 @@
 import Image from 'next/image'; // Importa o componente Image do Next.js
-import portoLogo from "@/public/imgs/footer/porto_logo.png";
-import googlePlay from "@/public/imgs/footer/googleplay.png";
-import appStore from "@/public/imgs/footer/appstore.png";
-import telefoneIcon from "@/public/imgs/footer/icones_contato/telefone.png";
-import siteIcon from "@/public/imgs/footer/icones_contato/site.png";
-import emailIcon from "@/public/imgs/footer/icones_contato/email.png";
+import portoLogo from "@/assets/imgs/footer/porto_logo.png";
+import googlePlay from "@/assets/imgs/footer/googleplay.png";
+import appStore from "@/assets/imgs/footer/appstore.png";
+import telefoneIcon from "@/assets/imgs/footer/icones_contato/telefone.png";
+import siteIcon from "@/assets/imgs/footer/icones_contato/site.png";
+import emailIcon from "@/assets/imgs/footer/icones_contato/email.png";
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {

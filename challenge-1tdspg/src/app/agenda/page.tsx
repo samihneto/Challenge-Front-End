@@ -66,11 +66,11 @@ export default function Agenda() {
         }
     };
 
-    const handleEdit = (agendamento: TipoAgendamento) => {
-        setAgendamentoAtual(agendamento); 
-        setAgendar(agendamento); 
-        toggleModal(); 
-    };
+    // const handleEdit = (agendamento: TipoAgendamento) => {
+    //     setAgendamentoAtual(agendamento); 
+    //     setAgendar(agendamento); 
+    //     toggleModal(); 
+    // };
 
     const handleDelete = async (id: number) => {
         try {

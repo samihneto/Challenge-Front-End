@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import erro from "@/public/imgs/content/not-found/erro.png";
+import erro from "@/assets/imgs/content/not-found/erro.png";
 
 export default async function NotFound() {
     

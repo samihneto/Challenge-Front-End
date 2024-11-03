@@ -1,10 +1,10 @@
 export type TipoChamado = {
-    clienteUserId: any;
+    clienteUserId: number;
     dataAbertura: string;
-    idChamdo: any;
-    oficinaUserId: any;
+    idChamdo: number | string;
+    oficinaUserId: number;
     status: string;
-    veiculoIdVeiculo: any;
+    veiculoIdVeiculo: number;
 }
 
 export interface TipoAgendamento {

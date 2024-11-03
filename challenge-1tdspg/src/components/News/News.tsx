@@ -1,5 +1,5 @@
 import Image from 'next/image'; // Importa o componente Image do Next.js
-import mecanico from '@/public/imgs/content/news/mecanico.webp';
+import mecanico from '@/assets/imgs/content/news/mecanico.webp';
 
 export default function News() {
     return (

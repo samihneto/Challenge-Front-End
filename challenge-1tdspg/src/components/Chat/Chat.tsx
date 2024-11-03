@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { FaComments, FaTimes } from 'react-icons/fa';
 import Image from 'next/image'; // Importe o componente Image do Next.js
-import Send from '@/public/imgs/content/agenda/send.png'
+import Send from '@/assets/imgs/content/agenda/send.png'
 
 export default function Chat() {
   const [modal, setModal] = useState(false);

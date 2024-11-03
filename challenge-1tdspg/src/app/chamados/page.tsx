@@ -6,15 +6,15 @@ import { useEffect, useState } from "react";
 export default function Chamados() {
     const [chamados, setChamados] = useState<TipoChamado[]>([]);
     const [newChamado, setNewChamado] = useState<TipoChamado>({
-        clienteUserId: "",
+        clienteUserId: 0,
         dataAbertura: "",
-        idChamdo: "",
-        veiculoIdVeiculo: "",
-        oficinaUserId: "",
+        idChamdo: 0,
+        veiculoIdVeiculo: 0,
+        oficinaUserId: 0,
         status: ""
     });
     const [isEditing, setIsEditing] = useState(false);
-    const [editingId, setEditingId] = useState<string | null>(null);
+    const [editingId, setEditingId] = useState<string | number | null>(null);
 
     // Método Get
     useEffect(() => {
@@ -76,23 +76,22 @@ export default function Chamados() {
     };
 
     // Método para excluir um chamado
-    const handleDeleteChamado = async (id: string) => {
-        const response = await fetch(`http://localhost:8080/mecanico/chamado/${id}`, {
+    const handleDeleteChamado = async (id: string | number) => {
+        const response = await fetch(`http://localhost:8080/mecanico/chamado/${String(id)}`, {
             method: "DELETE",
         });
         if (response.ok) {
-
-            setChamados(chamados.filter(c => c.idChamdo !== id));
+            setChamados(chamados.filter(c => String(c.idChamdo) !== String(id)));
         }
     };
     // Resetar formulário
     const resetForm = () => {
         setNewChamado({
-            clienteUserId: "",
+            clienteUserId: 0,
             dataAbertura: "",
-            idChamdo: "",
-            veiculoIdVeiculo: "",
-            oficinaUserId: "",
+            idChamdo: 0,
+            veiculoIdVeiculo: 0,
+            oficinaUserId: 0,
             status: ""
         });
         setIsEditing(false);
@@ -123,7 +122,7 @@ export default function Chamados() {
                 <tbody>
                     {chamados.map(c => (
                         <tr key={c.clienteUserId}>
-                            <td className="text-white font-archivo font-medium text-xl p-2">{c.clienteUserId}</td>    
+                            <td className="text-white font-archivo font-medium text-xl p-2">{c.clienteUserId}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.dataAbertura}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.idChamdo}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.veiculoIdVeiculo}</td>
@@ -133,7 +132,12 @@ export default function Chamados() {
                                 <button onClick={() => handleEditChamado(c)} className="bg-blue-500 font-archivo font-medium text-xl p2 text-black p-1 hover:scale-105">Editar</button>
                                 <button onClick={() => handleDeleteChamado(c.idChamdo)} className="bg-red-500 font-archivo font-medium text-xl p2 text-white p-1 ml-2 hover:scale-105">Excluir</button>
                             </td>
-                            <td><Link className="underline text-white font-archivo font-medium text-xl p2" href={`/chamados/${c.idChamdo}`}>Ver Chamado</Link></td>
+                            <td>
+                                <Link className="underline text-white font-archivo font-medium text-xl p2" href={`/chamados/${String(c.idChamdo)}`}>
+                                    Ver Chamado
+                                </Link>
+                            </td>
+
                         </tr>
                     ))}
                 </tbody>
@@ -150,61 +154,85 @@ export default function Chamados() {
             {modal && (
                 <div onClick={toggleModal} className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div onClick={(e) => e.stopPropagation()} className=" bg-white shadow-lg rounded-lg p-8">
-                        <form onSubmit={isEditing ? handleUpdateChamado : handleAddChamado} className="flex flex-col gap-y-10 mt-4">
-                            <input
-                                type="text"
-                                name="clienteUserId"
-                                placeholder="ID Cliente"
-                                onChange={handleChange}
-                                value={newChamado.clienteUserId}
-                                required
-                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
-                            />
-                            <input
-                                type="text"
-                                name="dataAbertura"
-                                placeholder="Data Abertura"
-                                onChange={handleChange}
-                                value={newChamado.dataAbertura}
-                                required
-                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
-                            />
-                            <input
-                                type="text"
-                                name="idChamdo"
-                                placeholder="ID Chamado"
-                                onChange={handleChange}
-                                value={newChamado.idChamdo}
-                                required
-                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
-                            />
-                            <input
-                                type="text"
-                                name="veiculoIdVeiculo"
-                                placeholder="ID Veículo"
-                                onChange={handleChange}
-                                value={newChamado.veiculoIdVeiculo}
-                                required
-                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
-                            />
-                            <input
-                                type="text"
-                                name="oficinaUserId"
-                                placeholder="ID Oficina"
-                                onChange={handleChange}
-                                value={newChamado.oficinaUserId}
-                                required
-                                className="p-2 bg-gray-200 rounded-lg focus:outline-none"
-                            />
-                            <input
-                                type="text"
-                                name="status"
-                                placeholder="Status"
-                                onChange={handleChange}
-                                value={newChamado.status}
-                                required
-                                className="p-2 border-"
-                            />
+                        <form onSubmit={isEditing ? handleUpdateChamado : handleAddChamado} className="flex flex-col gap-y-4 mt-4">
+                            <div className="flex flex-col">
+                                <label htmlFor="clienteUserId" className="font-bold text-[#00102c] text-xl">ID Cliente</label>
+                                <input
+                                    type="text"
+                                    name="clienteUserId"
+                                    placeholder="ID Cliente"
+                                    onChange={handleChange}
+                                    value={newChamado.clienteUserId}
+                                    required
+                                    className="p-2 bg-gray-200 rounded-lg focus:outline-none"
+                                />
+                            </div>
+
+                            <div className="flex flex-col">
+                                <label htmlFor="dataAbertura" className="font-bold text-[#00102c] text-xl">Data Abertura</label>
+                                <input
+                                    type="text"
+                                    name="dataAbertura"
+                                    placeholder="Data Abertura"
+                                    onChange={handleChange}
+                                    value={newChamado.dataAbertura}
+                                    required
+                                    className="p-2 bg-gray-200 rounded-lg focus:outline-none"
+                                />
+                            </div>
+
+                            <div className="flex flex-col">
+                                <label htmlFor="idChamdo" className="font-bold text-[#00102c] text-xl">ID Chamado</label>
+                                <input
+                                    type="text"
+                                    name="idChamdo"
+                                    placeholder="ID Chamado"
+                                    onChange={handleChange}
+                                    value={newChamado.idChamdo}
+                                    required
+                                    className="p-2 bg-gray-200 rounded-lg focus:outline-none"
+                                />
+                            </div>
+
+                            <div className="flex flex-col">
+                                <label htmlFor="veiculoIdVeiculo" className="font-bold text-[#00102c] text-xl">ID Veículo</label>
+                                <input
+                                    type="text"
+                                    name="veiculoIdVeiculo"
+                                    placeholder="ID Veículo"
+                                    onChange={handleChange}
+                                    value={newChamado.veiculoIdVeiculo}
+                                    required
+                                    className="p-2 bg-gray-200 rounded-lg focus:outline-none"
+                                />
+                            </div>
+
+                            <div className="flex flex-col">
+                                <label htmlFor="oficinaUserId" className="font-bold text-[#00102c] text-xl">ID Oficina</label>
+                                <input
+                                    type="text"
+                                    name="oficinaUserId"
+                                    placeholder="ID Oficina"
+                                    onChange={handleChange}
+                                    value={newChamado.oficinaUserId}
+                                    required
+                                    className="p-2 bg-gray-200 rounded-lg focus:outline-none"
+                                />
+                            </div>
+
+                            <div className="flex flex-col">
+                                <label htmlFor="status" className="font-bold text-[#00102c] text-xl">Status</label>
+                                <input
+                                    type="text"
+                                    name="status"
+                                    placeholder="Status"
+                                    onChange={handleChange}
+                                    value={newChamado.status}
+                                    required
+                                    className="p-2 bg-gray-200 rounded-lg focus:outline-none"
+                                />
+                            </div>
+
                             <button type="submit" className="bg-blue-500 text-white p-2 rounded-lg hover:scale-105">
                                 {isEditing ? "Atualizar Chamado" : "Adicionar Chamado"}
                             </button>

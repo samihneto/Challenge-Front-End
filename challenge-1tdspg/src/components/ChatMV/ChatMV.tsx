@@ -1,6 +1,5 @@
-import Send from '@/public/imgs/content/agenda/send.png';
+import Send from '@/assets/imgs/content/agenda/send.png';
 import Image from 'next/image';
-import Agenda from '../Agenda/Agenda';
 
 export default function ChatMV() {
     return (

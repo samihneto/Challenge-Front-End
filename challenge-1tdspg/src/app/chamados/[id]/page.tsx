@@ -33,23 +33,23 @@ export default async function Chamado({ params }: { params: { id: string } }) {
     <ul className="p-5 bg-white rounded-lg shadow-xl flex flex-col gap-10">
       <li className="flex items-center justify-center gap-5">
         <h1 className="font-archivo font-black text-[#00102c] text-3xl">ID Cliente:</h1>
-        <h1 className="font-teko font-black text-[#00102c] text-4xl">{chamado.clienteUserId}</h1>
+        <h1 className="font-teko font-black bg-[#00102c] text-white text-4xl rounded-lg p-4 shadow-lg">{chamado.clienteUserId}</h1>
       </li>
       <li className="flex items-center justify-center gap-5">
         <h1 className="font-archivo font-black text-[#00102c] text-3xl">Data Abertura:</h1>
-        <h1 className="font-teko font-black text-[#00102c] text-4xl">{chamado.dataAbertura}</h1>
+        <h1 className="font-teko font-black bg-[#00102c] text-white text-4xl rounded-lg p-4 shadow-lg">{chamado.dataAbertura}</h1>
       </li>
       <li className="flex items-center justify-center gap-5">
         <h1 className="font-archivo font-black text-[#00102c] text-3xl">ID Veículo:</h1>
-        <h1 className="font-teko font-black text-[#00102c] text-4xl">{chamado.veiculoIdVeiculo}</h1>
+        <h1 className="font-teko font-black bg-[#00102c] text-white text-4xl rounded-lg p-4 shadow-lg">{chamado.veiculoIdVeiculo}</h1>
       </li>
       <li className="flex items-center justify-center gap-5">
         <h1 className="font-archivo font-black text-[#00102c] text-3xl">ID Oficina:</h1>
-        <h1 className="font-teko font-black text-[#00102c] text-4xl">{chamado.oficinaUserId}</h1>
+        <h1 className="font-teko font-black bg-[#00102c] text-white text-4xl rounded-lg p-4 shadow-lg">{chamado.oficinaUserId}</h1>
       </li>
       <li className="flex items-center justify-center gap-5">
         <h1 className="font-archivo font-black text-[#00102c] text-3xl">Status:</h1>
-        <h1 className="font-teko font-black text-[#00102c] text-4xl">{chamado.status}</h1>
+        <h1 className="font-teko font-black bg-[#00102c] text-white text-4xl rounded-lg p-4 shadow-lg">{chamado.status}</h1>
       </li>
     </ul>
     <button className="bg-blue-500 text-white font-archivo font-semibold p-3 rounded-lg hover:scale-105">

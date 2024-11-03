@@ -1,19 +1,26 @@
 import { NextResponse } from "next/server";
 import fs from "fs/promises";
 
-export async function GET(request: Request, { params }: any) {
+// Definindo o tipo para os agendamentos
+interface Agendamento {
+    id: number;
+    nota: string;
+    dataAgendamento: string;
+}
+
+export async function GET() {
     const file = await fs.readFile(process.cwd() + '/src/app/dados/db.json', 'utf8');
-    return NextResponse.json(JSON.parse(file))
+    return NextResponse.json(JSON.parse(file));
 }
 
 export async function POST(request: Request) {
-    const { id, nota, dataAgendamento } = await request.json();
+    const { nota, dataAgendamento } = await request.json();
 
-    const file = await fs.readFile(process.cwd() + '/src/app/dados/db.json', 'utf8')
+    const file = await fs.readFile(process.cwd() + '/src/app/dados/db.json', 'utf8');
     const data = JSON.parse(file);
 
-    const newAgendamento = {
-        id:data.agendamentos[data.agendamentos.length-1].id + 1,
+    const newAgendamento: Agendamento = {
+        id: data.agendamentos[data.agendamentos.length - 1].id + 1,
         nota,
         dataAgendamento,
     };
@@ -21,16 +28,17 @@ export async function POST(request: Request) {
     data.agendamentos.push(newAgendamento);
 
     await fs.writeFile(process.cwd() + '/src/app/dados/db.json', JSON.stringify(data));
-    return NextResponse.json({ message: "Produto adicionado com sucesso!" })
+    return NextResponse.json({ message: "Produto adicionado com sucesso!" });
 }
 
 // Método PUT - Atualiza um agendamento existente com base no ID
-export async function PUT(request: Request, { params }: any) {
+export async function PUT(request: Request) {
     const { id, nota, dataAgendamento } = await request.json();
     const file = await fs.readFile(process.cwd() + '/src/app/dados/db.json', 'utf8');
     const data = JSON.parse(file);
 
-    const index = data.agendamentos.findIndex((agendamento: any) => agendamento.id === id);
+    // Usando a interface `Agendamento` para tipar corretamente
+    const index = data.agendamentos.findIndex((agendamento: Agendamento) => agendamento.id === id);
     if (index === -1) {
         return NextResponse.json({ message: "Agendamento não encontrado" }, { status: 404 });
     }
@@ -46,12 +54,12 @@ export async function PUT(request: Request, { params }: any) {
 }
 
 // Método DELETE - Remove um agendamento com base no ID
-export async function DELETE(request: Request, { params }: any) {
+export async function DELETE(request: Request) {
     const { id } = await request.json();
     const file = await fs.readFile(process.cwd() + '/src/app/dados/db.json', 'utf8');
     const data = JSON.parse(file);
 
-    const index = data.agendamentos.findIndex((agendamento: any) => agendamento.id === id);
+    const index = data.agendamentos.findIndex((agendamento: Agendamento) => agendamento.id === id);
     if (index === -1) {
         return NextResponse.json({ message: "Agendamento não encontrado" }, { status: 404 });
     }

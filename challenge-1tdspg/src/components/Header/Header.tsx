@@ -1,5 +1,5 @@
 import Image from 'next/image'; 
-import logoMV2 from "@/public/imgs/header/logo_mv2.png";
+import logoMV2 from "@/assets/imgs/header/logo_mv2.png";
 import Chat from '../Chat/Chat';
 import Entry from '../Entry/Entry';
 import Link from 'next/link';

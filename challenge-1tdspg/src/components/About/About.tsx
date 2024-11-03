@@ -1,10 +1,10 @@
 "use client"; // Adiciona esta linha para marcar o componente como Client-side
 
 import dynamic from 'next/dynamic';
-import Image, { StaticImageData } from 'next/image';
-import samir from '@/public/imgs/content/about/samir.jpg';
-import levy from '@/public/imgs/content/about/levy.jpg';
-import andre from '@/public/imgs/content/about/andre.jpg';
+import { StaticImageData } from 'next/image';
+import samir from '@/assets/imgs/content/about/samir.jpg';
+import levy from '@/assets/imgs/content/about/levy.jpg';
+import andre from '@/assets/imgs/content/about/andre.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import CardAbout from '../CardAbout/CardAbout';
