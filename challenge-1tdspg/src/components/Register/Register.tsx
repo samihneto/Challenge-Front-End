@@ -2,16 +2,19 @@
 import { useState } from 'react';
 
 export default function Register() {
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [modal, setModal] = useState(false);
 
-    const closeModal = () => {
-        setIsModalOpen(false);
+    const toggleModal = () => {
+        setModal(!modal);
     };
 
     return (
         <>
-            {isModalOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={closeModal}>
+            <button onClick={toggleModal} className="w-40 h-12 bg-blue-100 text-blue-900 rounded-md font-semibold shadow-md hover:scale-105 transition-transform">
+                CADASTRO
+            </button>
+            {modal && (
+                <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50" onClick={toggleModal}>
                     <div className="bg-white rounded-lg p-12 shadow-lg" onClick={(e) => e.stopPropagation()}>
                         <section className="flex flex-col items-center justify-center gap-4">
                             <form name="form__cadastro" method="post" className="flex flex-col gap-10">

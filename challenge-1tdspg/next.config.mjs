@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // async rewrites() {
-    //   return [
-    //     {
-    //       source: '/api/:path*',
-    //       destination: 'http://localhost:8080/mecanico/:path*', // Proxy para a API
-    //     },
-    //   ];
-    // },
+    async rewrites() {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'http://localhost:8080/mecanico/:path*', // Proxy para a API
+        },
+      ];
+    },
   };
   
   export default nextConfig;

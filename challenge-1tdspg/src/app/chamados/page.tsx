@@ -7,7 +7,7 @@ export default function Chamados() {
     const [chamados, setChamados] = useState<TipoChamado[]>([]);
     const [newChamado, setNewChamado] = useState<TipoChamado>({
         clienteUserId: 0,
-        dataAbertura: "",
+        dataAbertura: new Date().toISOString().split('T')[0], // Define a data atual
         idChamdo: 0,
         veiculoIdVeiculo: 0,
         oficinaUserId: 0,
@@ -46,6 +46,7 @@ export default function Chamados() {
             const data = await response.json();
             setChamados([...chamados, data]);
             resetForm();
+            toggleModal();
         }
     };
     // Método para editar um Chamado
@@ -72,6 +73,7 @@ export default function Chamados() {
             const updatedData = await response.json();
             setChamados(chamados.map(c => (c.idChamdo === editingId ? updatedData : c)));
             resetForm();
+            toggleModal();
         }
     };
 
@@ -121,7 +123,7 @@ export default function Chamados() {
                 </thead>
                 <tbody>
                     {chamados.map(c => (
-                        <tr key={c.clienteUserId}>
+                        <tr key={c.idChamdo}>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.clienteUserId}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.dataAbertura}</td>
                             <td className="text-white font-archivo font-medium text-xl p-2">{c.idChamdo}</td>
@@ -171,9 +173,8 @@ export default function Chamados() {
                             <div className="flex flex-col">
                                 <label htmlFor="dataAbertura" className="font-bold text-[#00102c] text-xl">Data Abertura</label>
                                 <input
-                                    type="text"
+                                    type="date" // Mude de "text" para "date"
                                     name="dataAbertura"
-                                    placeholder="Data Abertura"
                                     onChange={handleChange}
                                     value={newChamado.dataAbertura}
                                     required

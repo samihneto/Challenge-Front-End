@@ -4,21 +4,27 @@ import { useState } from 'react';
 import Link from 'next/link'; // Importa Link do Next.js para navegações internas
 
 export default function Login() {
-    const [isModalOpen, setIsModalOpen] = useState(true);
-    
-    const closeModal = () => {
-        setIsModalOpen(false);
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modal);
     };
 
     return (
         <>
-            {isModalOpen && (
-                <div 
-                    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center z-50" 
-                    onClick={closeModal}
+
+
+            <button onClick={toggleModal} className="w-40 h-12 bg-blue-900 text-white rounded-md font-semibold shadow-md hover:scale-105 transition-transform">
+                LOGIN
+            </button>
+
+            {modal && (
+                <div
+                    className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center z-50"
+                    onClick={toggleModal}
                 >
-                    <div 
-                        className="bg-white p-8 rounded-lg shadow-lg w-96" 
+                    <div
+                        className="bg-white p-8 rounded-lg shadow-lg w-96"
                         onClick={(e) => e.stopPropagation()} // Impede o fechamento ao clicar dentro do modal
                     >
                         <section className="flex flex-col items-center justify-center gap-10">
@@ -60,7 +66,7 @@ export default function Login() {
                                         </div>
                                     </div>
                                 </div>
-                                <button 
+                                <button
                                     className="font-sans text-lg bg-[#001A47] text-white rounded-lg w-full h-12 hover:scale-105 transition-transform "
                                     type="submit"
                                 >
