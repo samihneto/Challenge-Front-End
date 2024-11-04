@@ -22,6 +22,9 @@ https://vercel.com/samir-netos-projects/challenge-1tdspg/j9LkK9ksJcmome4SB4342TK
 https://challenge-1tdspg-awufcmvkm-samir-netos-projects.vercel.app/chamados
 
 
+Link do Repositório Java:
+https://github.com/felipe-2833/MecanicoVirtualJava
+
 Link do Figma:
 https://www.figma.com/design/NELNUSFcWYq8dH8qpyvsSm/Challenge?node-id=0-1&t=Ipj8zFO4CyrWXjPT-1
 
