@@ -4,7 +4,7 @@
 ## Mecânico Virtual 🔧 - Challenge Porto Seguro 🚗
 ### _Integrantes_
 - André Geraldi Marcolongo - RM555285 - andremarko
-- Felipe Levy Stephens Fidelix - RM555285 - felipe-2833
+- Felipe Levy Stephens Fidelix - RM556426 - felipe-2833
 - Samir Hage Neto - RM557260 -samihneto
 
 
