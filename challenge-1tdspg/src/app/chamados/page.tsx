@@ -8,7 +8,7 @@ export default function Chamados() {
     const [newChamado, setNewChamado] = useState<TipoChamado>({
         clienteUserId: 0,
         dataAbertura: new Date().toISOString().split('T')[0], // Define a data atual
-        idChamdo: 0,
+        idChamdo: 2040,
         veiculoIdVeiculo: 0,
         oficinaUserId: 0,
         status: ""
@@ -34,7 +34,7 @@ export default function Chamados() {
     // Adicionar um Chamado
     const handleAddChamado = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+    
         const response = await fetch("http://localhost:8080/mecanico/chamado", {
             method: "POST",
             headers: {
@@ -47,8 +47,10 @@ export default function Chamados() {
             setChamados([...chamados, data]);
             resetForm();
             toggleModal();
+            window.location.reload();
         }
     };
+
     // Método para editar um Chamado
     const handleEditChamado = (chamado: TipoChamado) => {
         setNewChamado(chamado);
@@ -181,20 +183,6 @@ export default function Chamados() {
                                     className="p-2 bg-gray-200 rounded-lg focus:outline-none"
                                 />
                             </div>
-
-                            <div className="flex flex-col">
-                                <label htmlFor="idChamdo" className="font-bold text-[#00102c] text-xl">ID Chamado</label>
-                                <input
-                                    type="text"
-                                    name="idChamdo"
-                                    placeholder="ID Chamado"
-                                    onChange={handleChange}
-                                    value={newChamado.idChamdo}
-                                    required
-                                    className="p-2 bg-gray-200 rounded-lg focus:outline-none"
-                                />
-                            </div>
-
                             <div className="flex flex-col">
                                 <label htmlFor="veiculoIdVeiculo" className="font-bold text-[#00102c] text-xl">ID Veículo</label>
                                 <input
